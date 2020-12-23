@@ -154,7 +154,8 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
     <!-- Charts JS -->
-	<script src="assets/plugins/chart.js/chart.min.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-beta.5/chart.js"></script>
+
 	
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
@@ -169,7 +170,6 @@
 	<script src="assets/js/cu_graph.js"></script> 
 
 	<script>
-		
         var ctx = document.getElementById("myChart");
 		var lineChart = new Chart(ctx, {
 		type: 'line',
@@ -182,7 +182,7 @@
 			fill: false,
 			},
 			{
-			label: "Self-declared positive NHS tests amongst Cardiff University students",
+			label: "Self-declared positive NHS tests amongst students",
 			data: students,
 			borderColor: "#cd3e4e",
 			fill: false,
@@ -206,8 +206,7 @@
 			}
 		}
 		});
-
-    </script>
+</script>
 
 </body>
 </html> 
