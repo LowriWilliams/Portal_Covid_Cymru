@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYQ5ZQJQX9"></script>
 	<script>
@@ -31,15 +30,12 @@
    	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
    	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 
-	<style>
-	.dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
-	</style>	
 </head> 
 
 
 
 <body class="app">   	
-    <header class="app-header fixed-top">	  
+    <header class="app-header fixed-top">
 		<div class="app-header-inner">  
 	        <div class="container-fluid py-2">
 		        <div class="app-header-content"> 
@@ -54,7 +50,7 @@
 		        	</div><!--//row-->
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
-        </div> 	            
+        </div>	   	            
         <div id="app-sidepanel" class="app-sidepanel"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
@@ -103,11 +99,13 @@
 							        <li class="submenu-item"><a class="submenu-link" href="cu.html">Cardiff University</a></li>
 						        </ul>
 					        </div>
-					    </li><!--//nav-item-->			    
+					    </li><!--//nav-item-->
+					    
+		    
 				    </ul><!--//app-menu-->
 				</nav><!--//app-nav-->
 
-				<div class="app-sidepanel-footer" style='height:50px;'>
+				<div class="app-sidepanel-footer">
 				    <nav class="app-nav app-nav-footer">
 					    <ul class="app-menu footer-menu list-unstyled">
 						    <li class="nav-item" style='height:100%;'>
@@ -124,7 +122,8 @@
 	        </div><!--//sidepanel-inner-->
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
-    <div class="app-wrapper">
+    
+	<div class="app-wrapper">
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    <div class="row">
@@ -133,7 +132,7 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Daily Positive COVID-19 Cases Across Age Demographics</h4>
+										<h4 class="app-card-title">Cumulative Positive COVID-19 Cases Across Gender Demographics</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -146,7 +145,7 @@
 					</div><!--//col-->
 				</div>
 			</div>
-		</div>
+		</div>	    
 	    <footer class="app-footer">
 		    <div class="container text-center py-3">
 		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
@@ -164,91 +163,35 @@
 
     <!-- Charts JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-beta.5/chart.js"></script>
+
 	
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
 
 	    <!-- Charts JS -->
 	<script type='text/javascript'>
+		var males = false;
+		var females = false;
 		var dates = false;
-		var tmp_1 = false;
-		var tmp_2 = false;
-		var tmp_3 = false;
-		var tmp_4 = false;
-		var tmp_5 = false;
-		var tmp_6 = false;
-		var tmp_7 = false;
-		var tmp_8 = false;
-		var tmp_9 = false;
-		var tmp_10 = false;
 	</script>
-	<script src="assets/js/age_graph.js"></script> 
+	<script src="assets/js/gender_graph.js"></script> 
 
 	<script>
-		
         var ctx = document.getElementById("myChart");
 		var lineChart = new Chart(ctx, {
 		type: 'line',
 		data: {
 			labels: dates,
 			datasets: [{
-			label: "0-9",
-			data: tmp_1,
+			label: "Males",
+			data: males,
 			borderColor: "#3e95cd",
 			fill: false,
 			},
 			{
-			label: "10-19",
-			data: tmp_2,
-			borderColor: "#763ecd",
-			fill: false,
-			},
-			{
-			label: "20-29",
-			data: tmp_3,
-			borderColor: "#cd763e",
-			fill: false,
-			},
-			{
-			label: "30-39",
-			data: tmp_4,
-			borderColor: "#95cd3e",
-			fill: false,
-			},
-			{
-			label: "40-49",
-			data: tmp_5,
-			borderColor: "#cd3e95",
-			fill: false,
-			},
-			{
-			label: "50-59",
-			data: tmp_6,
-			borderColor: "#3ecd76",
-			fill: false,
-			},
-			{
-			label: "60-69",
-			data: tmp_7,
-			borderColor: "#e6d300",
-			fill: false,
-			},
-			{
-			label: "70-79",
-			data: tmp_8,
-			borderColor: "#00e6d3",
-			fill: false,
-			},
-			{
-			label: "80-89",
-			data: tmp_9,
-			borderColor: "#cd0011",
-			fill: false,
-			},
-			{
-			label: "90+",
-			data: tmp_10,
-			borderColor: "#a500b4",
+			label: "Females",
+			data: females,
+			borderColor: "#cd3e4e",
 			fill: false,
 			}
 			]
@@ -265,9 +208,7 @@
 			}
 		}
 		});
-
-		
-    </script>
+</script>
 
 </body>
 </html> 
