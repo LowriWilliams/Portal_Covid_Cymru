@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYQ5ZQJQX9"></script>
 	<script>
@@ -30,6 +31,7 @@
    	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
    	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 
+	
 </head> 
 
 
@@ -96,13 +98,11 @@
 							        <li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="age.html">Daily Age Distribution</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="gender.html">Cumulative Gender Distribution</a></li>
-									<li class="submenu-item"><a class="submenu-link" href="gender_age.html">Cumulative Gender and Age Distribution</a></li>
+                                    <li class="submenu-item"><a class="submenu-link" href="gender_age.html">Cumulative Gender and Age Distribution</a></li>
 							        <li class="submenu-item"><a class="submenu-link" href="cu.html">Cardiff University</a></li>
 						        </ul>
 					        </div>
-					    </li><!--//nav-item-->
-					    
-		    
+					    </li><!--//nav-item-->			    
 				    </ul><!--//app-menu-->
 				</nav><!--//app-nav-->
 
@@ -124,7 +124,7 @@
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
     
-	<div class="app-wrapper">
+    <div class="app-wrapper">
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    <div class="row">
@@ -133,20 +133,43 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Self-Declared Positive NHS COVID-19 Test Results Amongst Cardiff University Students Vs. Cardiff University Asymptomatic Testing Vs. Number of Cases in the Cardiff Region</h4>
+										<h4 class="app-card-title">Cumulative Positive COVID-19 Cases Across Age and Gender Demographics</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
 							<div class="app-card-body p-3 p-lg-4">
+								<div class="mb-3 d-flex">   
+									<select id="chartType" class="form-select form-select-sm ml-auto d-inline-flex w-auto">
+										<option value="0_9">0-9</option>
+										<option value="10_19">10-19</option>
+										<option value="20_29">20-29</option>
+										<option value="30_39">30-39</option>
+										<option value="40_49">40-49</option>
+										<option value="50_59">50-59</option>
+										<option value="60_69">60-69</option>
+										<option value="70_79">70-79</option>
+										<option value="80_89">80-89</option>
+										<option value="90">90+</option>
+									</select>	
+								</div>
 								<div class="chart-container" style="position:relative;width:100%;height:600px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-									<canvas id="myChart"></canvas>
+									<canvas id="0_9Chart"></canvas>
+									<canvas id="10_19Chart"></canvas>
+									<canvas id="20_29Chart"></canvas>
+                                    <canvas id="30_39Chart"></canvas>
+                                    <canvas id="40_49Chart"></canvas>
+									<canvas id="50_59Chart"></canvas>
+									<canvas id="60_69Chart"></canvas>
+									<canvas id="70_79Chart"></canvas>
+									<canvas id="80_89Chart"></canvas>
+									<canvas id="90Chart"></canvas>
 								</div>
 							</div><!--//app-card-body-->
 						</div><!--//app-card-->
 					</div><!--//col-->
 				</div>
 			</div>
-		</div>	    
+		</div>
 	    <footer class="app-footer">
 		    <div class="container text-center py-3">
 		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
@@ -164,58 +187,384 @@
 
     <!-- Charts JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-beta.5/chart.js"></script>
-
 	
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
 
-	    <!-- Charts JS -->
 	<script type='text/javascript'>
-		var cardiff = false;
-		var students = false;
-		var asymptomatic = false;
 		var dates = false;
+		var df_0_9_f = false;
+		var df_0_9_m = false;
+        var df_10_19_f = false;
+		var df_10_19_m = false;
+		var df_20_29_f = false;
+		var df_20_29_m = false;
+		var df_30_39_f = false;
+		var df_30_39_m = false;
+		var df_40_49_f = false;
+		var df_40_49_m = false;
+        var df_50_59_f = false;
+		var df_50_59_m = false;
+        var df_60_69_f = false;
+		var df_60_69_m = false;
+        var df_70_79_f = false;
+		var df_70_79_m = false;
+        var df_80_89_f = false;
+		var df_80_89_m = false;
+        var df_90_f = false;
+		var df_90_m = false;
 	</script>
-	<script src="assets/js/cu_graph.js"></script> 
+	<script src="assets/js/gender_age_graph.js"></script> 
 
+	
 	<script>
-        var ctx = document.getElementById("myChart");
-		var lineChart = new Chart(ctx, {
-		type: 'line',
-		data: {
-			labels: dates,
-			datasets: [{
-			label: "Total cases in the Cardiff region",
-			data: cardiff,
-			borderColor: "#3e95cd",
-			fill: false,
-			},
-			{
-			label: "Self-declared positive NHS tests amongst students",
-			data: students,
-			borderColor: "#cd3e4e",
-			fill: false,
-			},
-			{
-			label: "Cardiff University positive asymptomatic testing",
-			data: asymptomatic,
-			borderColor: "#3ecd76",
-			fill: false,
-			}]
+		let select = document.querySelector('#chartType');
+		// concat Chart for the canvas ID
+		let chart = select.options[select.selectedIndex].value + 'Chart'; 
+		
+		document.querySelectorAll('canvas').forEach(c => {c.style.display = (c.id === chart)? 'inherit' : 'none';})
+
+		select.addEventListener('change', showHide);
+
+	function showHide() {
+	// concat Chart for the canvas ID
+	let chart = this.options[select.selectedIndex].value + 'Chart';
+		document.querySelectorAll('canvas')
+		.forEach(c => {
+		c.style.display = (c.id === chart) ? 'inherit' : 'none';
+		})
+	}
+
+	// 0-9
+	var ctx = document.getElementById("0_9Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_0_9_m,
+		borderColor:  "#3e95cd",
+		fill: false,
 		},
-		options: {
-			maintainAspectRatio: false,
-			responsive:true,
-			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero: true
-					}
-				}]
-			}
+		{
+		label: 'Females',
+		data: df_0_9_f,
+		borderColor:  "#cd3e4e",
+		fill: false
 		}
-		});
-</script>
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 10-19
+	var ctx = document.getElementById("10_19Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_10_19_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_10_19_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 20-29
+	var ctx = document.getElementById("20_29Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_20_29_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_20_29_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+	
+    // 30-39
+	var ctx = document.getElementById("30_39Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_30_39_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_30_39_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 40-49
+	var ctx = document.getElementById("40_49Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_40_49_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_40_49_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 50-59
+	var ctx = document.getElementById("50_59Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_50_59_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_50_59_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 60-69
+	var ctx = document.getElementById("60_69Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_60_69_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_60_69_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 70-79
+	var ctx = document.getElementById("70_79Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_70_79_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_70_79_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 80-89
+	var ctx = document.getElementById("80_89Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_80_89_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_80_89_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+
+    // 90+
+	var ctx = document.getElementById("90Chart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: dates,
+		datasets: [{
+		label: 'Males',
+		data: df_90_m,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+		{
+		label: 'Females',
+		data: df_90_f,
+		borderColor:  "#cd3e4e",
+		fill: false
+		}
+		]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		}
+	}
+	});
+	</script>
 
 </body>
 </html> 
