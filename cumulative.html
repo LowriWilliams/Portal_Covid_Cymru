@@ -191,6 +191,9 @@
 		var year_vaccination = false;
 		var month_vaccination = false;
 		var week_vaccination = false;
+		var year_tests = false;
+		var month_tests = false;
+		var week_tests = false;
 	</script>
 	<script src="assets/js/index_graph.js"></script> 
 
@@ -258,6 +261,12 @@
 		data: year_vaccination,
 		borderColor:  "#3ecd76",
 		fill: false
+		},
+		{
+		label: 'Cumulative Tests',
+		data: year_tests,
+		borderColor:  "#ffd500",
+		fill: false
 		}
 		]
 	},
@@ -301,6 +310,12 @@
 		data: month_vaccination,
 		borderColor:  "#3ecd76",
 		fill: false
+		},
+		{
+		label: 'Cumulative Tests',
+		data: month_tests,
+		borderColor:  "#ffd500",
+		fill: false
 		}
 		]
 	},
@@ -343,6 +358,12 @@
 		label: 'Cumulative Vaccinations',
 		data: week_vaccination,
 		borderColor:  "#3ecd76",
+		fill: false
+		},
+		{
+		label: 'Cumulative Tests',
+		data: week_tests,
+		borderColor:  "#ffd500",
 		fill: false
 		}]
 	},
