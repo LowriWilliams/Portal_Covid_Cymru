@@ -187,7 +187,8 @@
 
     <!-- Charts JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js"></script>
+
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
 
@@ -235,6 +236,28 @@
 		})
 	}
 
+	var marketing = ['23/03/2020', '01/06/2020', '23/10/2020', '09/11/2020', '20/12/2020'];
+	var amount = ["Lockdown begins", "Lockdown ends", "Firebreak begins", "Firebreak ends", "Lockdown begins"];
+	// populate 'annotations' array dynamically based on 'marketing'
+	var annotations = marketing.map(function(date, index) {
+		return {
+			type: 'line',
+			id: 'vline' + index,
+			mode: 'vertical',
+			scaleID: 'x-axis-0',
+			value: date,
+			borderColor: 'grey',
+			borderWidth: 1,
+			borderDash: [10,5],
+			label: {
+				enabled: true,
+				position: "center",
+				content: amount[index],
+				fontSize: 6,
+			}
+		}
+	});
+
 	// 0-9
 	var ctx = document.getElementById("0_9Chart");
 	var lineChart = new Chart(ctx, {
@@ -264,6 +287,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -297,6 +324,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -330,6 +361,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -363,6 +398,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -396,6 +435,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -429,6 +472,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -462,6 +509,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -495,6 +546,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -528,6 +583,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
@@ -561,6 +620,10 @@
 					beginAtZero: true
 				}
 			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
 		}
 	}
 	});
