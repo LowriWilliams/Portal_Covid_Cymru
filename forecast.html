@@ -93,7 +93,7 @@
 					        </a><!--//nav-link-->
 					        <div id="submenu-1" class="collapse submenu submenu-1" data-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
-								<li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
+							       <li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="daily.html">Daily Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="forecast.html">Forecasting Data</a></li>
 									<br>
@@ -137,7 +137,7 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Self-Declared Positive NHS COVID-19 Test Results Amongst Cardiff University Students Vs. Cardiff University Asymptomatic Testing Vs. Number of Cases in the Cardiff Region</h4>
+										<h4 class="app-card-title">10-Day Forecast of Cases, Deaths, and Tests in Wales</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -176,16 +176,22 @@
 
 	    <!-- Charts JS -->
 	<script type='text/javascript'>
-		var cardiff = false;
-		var students = false;
-		var asymptomatic = false;
 		var dates = false;
+		var predicted_cases = false;
+		var daily_cases = false;
+        var predicted_deaths = false;
+		var daily_deaths = false;
+        var forecast_start = false;
+        var predicted_tests = false;
+        var daily_tests = false;
 	</script>
-	<script src="assets/js/cu_graph.js"></script> 
+	<script src="assets/js/forecast_graph.js"></script> 
 
 	<script>
-		var marketing = ['23-03-2020', '01-06-2020', '23-10-2020', '09-11-2020', '20-12-2020'];
-		var amount = ["Lockdown begins", "Lockdown ends", "Firebreak begins", "Firebreak ends", "Lockdown begins"];
+
+        console.log(forecast_start)
+		var marketing = ['20-12-2020', forecast_start];
+		var amount = ["Lockdown begins", "Forecast"];
 		// populate 'annotations' array dynamically based on 'marketing'
 		var annotations = marketing.map(function(date, index) {
 		   return {
@@ -211,25 +217,45 @@
 		   data: {
 			  labels: dates,
 			  datasets: [{
-			label: "Total cases in the Cardiff region",
-			data: cardiff,
-			borderColor: "#3e95cd",
-			fill: false,
-			},
-			{
-			label: "Self-declared positive NHS tests amongst students",
-			data: students,
-			borderColor: "#cd3e4e",
-			fill: false,
-			},
-			{
-			label: "Cardiff University positive asymptomatic testing",
-			data: asymptomatic,
-			borderColor: "#3ecd76",
-			fill: false,
-			}]
+                label: "Daily Cases",
+                data: daily_cases,
+                borderColor: "#3e95cd",
+                fill: false,
+                },
+                {
+                label: "Forecasted Cases",
+                data: predicted_cases,
+                borderColor: "#3e95cd",
+                fill: false,
+                borderDash: [10,5]
+                },
+                {label: "Daily Deaths",
+                data: daily_deaths,
+                borderColor: "#cd3e4e",
+                fill: false,
+                },
+                {
+                label: "Forecasted Deaths",
+                data: predicted_deaths,
+                borderColor: "#cd3e4e",
+                fill: false,
+                borderDash: [10,5]
+                },
+                {label: "Daily Tests",
+                data: daily_tests,
+                borderColor: "#ffd500",
+                fill: false,
+                },
+                {
+                label: "Forecasted Tests",
+                data: predicted_tests,
+                borderColor: "#ffd500",
+                fill: false,
+                borderDash: [10,5]
+                }]
 		   },
 		   options: {
+              spanGaps: false,
 			  maintainAspectRatio: false,
 			  responsive:true,
 			  scales: {
