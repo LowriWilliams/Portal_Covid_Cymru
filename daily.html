@@ -134,7 +134,7 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Cumulative Cases, Deaths, Vaccinations, and Tests in Wales</h4>
+										<h4 class="app-card-title">Daily Cases, Deaths, and Tests in Wales</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -182,21 +182,28 @@
 	<script type='text/javascript'>
 		var year_dates = false;
 		var year_cases = false;
-		var year_deaths = false;
 		var month_dates = false;
 		var month_cases = false;
-		var month_deaths = false;
 		var week_dates = false;
 		var week_cases = false;
+        var year_average_cases = false;
+        var month_average_cases = false;
+        var week_average_cases = false;
+		var year_deaths = false;
+		var month_deaths = false;
 		var week_deaths = false;
-		var year_vaccination = false;
-		var month_vaccination = false;
-		var week_vaccination = false;
-		var year_tests = false;
+        var year_average_deaths = false;
+        var month_average_deaths = false;
+        var week_average_deaths = false;
+        var year_tests = false;
 		var month_tests = false;
 		var week_tests = false;
+        var year_average_tests = false;
+        var month_average_tests = false;
+        var week_average_tests = false;
+
 	</script>
-	<script src="assets/js/index_graph.js"></script> 
+	<script src="assets/js/daily_graph.js"></script> 
 
 	
 	<script>
@@ -246,30 +253,47 @@
 	data: {
 		labels: year_dates,
 		datasets: [{
-		label: 'Cumulative Cases',
+		label: 'Daily Cases',
 		data: year_cases,
 		borderColor:  "#3e95cd",
 		fill: false,
 		},
-		{
-		label: 'Cumulative Deaths',
+        {
+		label: '7 Day Moving Average Cases',
+		data: year_average_cases,
+		borderColor:  "grey",
+        borderDash: [10,5],
+		fill: false,
+        hidden: true
+		},
+        {
+		label: 'Daily Deaths',
 		data: year_deaths,
-		borderColor:  "#cd3e4e",
-		fill: false
+		borderColor: "#cd3e4e",
+		fill: false,
 		},
-		{
-		label: 'Cumulative Vaccinations',
-		data: year_vaccination,
-		borderColor:  "#3ecd76",
-		fill: false
+        {
+		label: '7 Day Moving Average Deaths',
+		data: year_average_deaths,
+		borderColor: "grey",
+		fill: false,
+        hidden: true
 		},
-		{
-		label: 'Cumulative Tests',
+        {
+		label: 'Daily Tests',
 		data: year_tests,
-		borderColor:  "#ffd500",
-		fill: false
+		borderColor: "#ffd500",
+		fill: false,
+		},
+        {
+		label: '7 Day Moving Average Tests',
+		data: year_average_tests,
+		borderColor:  "grey",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
 		}
-		]
+        ]
 	},
 	options: {
 		maintainAspectRatio: false,
@@ -295,30 +319,47 @@
 	data: {
 		labels: month_dates,
 		datasets: [{
-		label: 'Cumulative Cases',
+		label: 'Daily Cases',
 		data: month_cases,
 		borderColor:  "#3e95cd",
 		fill: false,
 		},
-		{
-		label: 'Cumulative Deaths',
+        {
+		label: '7 Day Moving Average',
+		data: month_average_cases,
+		borderColor:  "grey",
+        borderDash: [10,5],
+		fill: false,
+        hidden: true
+		},
+        {
+		label: 'Daily Deaths',
 		data: month_deaths,
 		borderColor: "#cd3e4e",
 		fill: false,
 		},
-		{
-		label: 'Cumulative Vaccinations',
-		data: month_vaccination,
-		borderColor:  "#3ecd76",
-		fill: false
+        {
+		label: '7 Day Moving Average Deaths',
+		data: month_average_deaths,
+		borderColor: "grey",
+		fill: false,
+        hidden: true
 		},
-		{
-		label: 'Cumulative Tests',
+        {
+		label: 'Daily Tests',
 		data: month_tests,
-		borderColor:  "#ffd500",
-		fill: false
+		borderColor: "#ffd500",
+		fill: false,
+		},
+        {
+		label: '7 Day Moving Average Tests',
+		data: month_average_tests,
+		borderColor:  "grey",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
 		}
-		]
+        ]
 	},
 	options: {
 		maintainAspectRatio: false,
@@ -344,29 +385,47 @@
 	data: {
 		labels: week_dates,
 		datasets: [{
-		label: 'Cumulative Cases',
+		label: 'Daily Cases',
 		data: week_cases,
 		borderColor:  "#3e95cd",
 		fill: false,
 		},
-		{
-		label: 'Cumulative Deaths',
+        {
+		label: '7 Day Moving Average',
+		data: week_average_cases,
+		borderColor:  "grey",
+        borderDash: [10,5],
+		fill: false,
+        hidden: true
+		},
+        {
+		label: 'Daily Deaths',
 		data: week_deaths,
 		borderColor: "#cd3e4e",
 		fill: false,
 		},
-		{
-		label: 'Cumulative Vaccinations',
-		data: week_vaccination,
-		borderColor:  "#3ecd76",
-		fill: false
+        {
+		label: '7 Day Moving Average Deaths',
+		data: week_average_deaths,
+		borderColor: "grey",
+		fill: false,
+        hidden: true
 		},
-		{
-		label: 'Cumulative Tests',
+        {
+		label: 'Daily Tests',
 		data: week_tests,
-		borderColor:  "#ffd500",
-		fill: false
-		}]
+		borderColor: "#ffd500",
+		fill: false,
+		},
+        {
+		label: '7 Day Moving Average Tests',
+		data: week_average_tests,
+		borderColor:  "grey",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		}
+        ]
 	},
 	options: {
 		maintainAspectRatio: false,
