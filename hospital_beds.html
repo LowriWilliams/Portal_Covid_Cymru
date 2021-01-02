@@ -25,22 +25,21 @@
     
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
-
-	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
-   	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
-   	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
-   	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+		
+	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+   	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 
 	<style>
 	.dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
 	</style>	
-	
 </head> 
 
 
 
 <body class="app">   	
-    <header class="app-header fixed-top">
+    <header class="app-header fixed-top">	  
 		<div class="app-header-inner">  
 	        <div class="container-fluid py-2">
 		        <div class="app-header-content"> 
@@ -55,7 +54,7 @@
 		        	</div><!--//row-->
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
-        </div>	   	            
+        </div>   	 	            
         <div id="app-sidepanel" class="app-sidepanel"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
@@ -98,7 +97,7 @@
 					        </a><!--//nav-link-->
 					        <div id="submenu-1" class="collapse submenu submenu-1" data-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
-								<li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="daily.html">Daily Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="forecast.html">Forecasting Data</a></li>
 									<br>
@@ -110,7 +109,7 @@
 						        </ul>
 					        </div>
 					    </li><!--//nav-item-->	
-						<li class="nav-item has-submenu">
+                        <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-table"></i>&nbsp;&nbsp;Tables</span>
@@ -127,7 +126,7 @@
 						        </ul>
 					        </div>
 					    </li><!--//nav-item-->	
-                        <li class="nav-item has-submenu">
+						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-ambulance"></i>&nbsp;&nbsp;Hospital Data</span>
@@ -142,11 +141,10 @@
 						        <ul class="submenu-list list-unstyled">
 									<li class="submenu-item"><a class="submenu-link" href="hospital_cumulative.html">Cumulative Admissions Data</a></li>
 							        <li class="submenu-item"><a class="submenu-link" href="hospital_daily.html">Daily Admissions Data</a></li>
-                                    <li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
-						        </ul>
+						            <li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
+								</ul>
 					        </div>
-					    </li><!--//nav-item-->	
-                        	    
+					    </li><!--//nav-item-->		    
 				    </ul><!--//app-menu-->
 				</nav><!--//app-nav-->
 
@@ -168,13 +166,14 @@
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
     
-    <div class="app-wrapper">
-	    <div class="app-content pt-3 p-md-3 p-lg-4">
+	<div class='app-wrapper'>
+		<div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
-			    <div class="row">
+						    
+				<div class="row">
 					<div class="col">
 						<div class="app-card app-card-chart h-100 shadow-sm">
-							<div class="app-card-header p-3">
+                            <div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
 										<h4 class="app-card-title">NHS Beds by Local Health Board as of 31/12/2020</h4>
@@ -275,28 +274,25 @@
 							</div><!--//app-card-body-->
 						</div><!--//app-card-->
 					</div><!--//col-->
-				</div>
+				</div><!--//row-->
 			</div>
-		</div>
-	    <footer class="app-footer">
-		    <div class="container text-center py-3">
-		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+		</div> 
+		<footer class="app-footer">
+			<div class="container text-center py-3">
+				<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
 			<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
 			<script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'D1D31KGYH');kofiwidget2.draw();</script>   
-		    </div>
-	    </footer><!--//app-footer-->
-	    
-    </div><!--//app-wrapper-->    					
+			</div>
+		</footer><!--//app-footer-->
+		
+	</div><!--//app-wrapper-->    					
 
  
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
-    <!-- Charts JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js"></script>
-
+	
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
 
@@ -312,32 +308,29 @@
 	</script>
 
 	<script>
-		$(document).ready( function () {
-		$('#myTable').DataTable();
-		} );
-	</script>
-
-	<script>
 		$(document).ready(function () {
 		$('#dtBasicExample').DataTable({iDisplayLength: -1});
 	  });
 	</script>
-	
+
+	<!-- Charts JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js"></script>
+
+	    <!-- Charts JS -->
 	<script type='text/javascript'>
 		var year_dates = false;
 		var year_beds = false;
+		var year_average_beds = false;
 		var month_dates = false;
 		var month_beds = false;
+		var month_average_beds = false;
 		var week_dates = false;
 		var week_beds = false;
-        var year_average_beds = false;
-        var month_average_beds = false;
-        var week_average_beds = false;
-        
+		var week_average_beds = false;
 	</script>
 	<script src="assets/js/hospital_beds_graph.js"></script> 
 
-	
 	<script>
 		let select = document.querySelector('#chartType');
 		// concat Chart for the canvas ID
@@ -388,13 +381,14 @@
 		label: 'Daily Number of Patients in Mechanical Ventilation Beds',
 		data: year_beds,
 		borderColor:  "#3e95cd",
-		fill: false,
+		fill: false
 		},
         {
-		label: '7 Day Moving Average',
+		label: '7 Day Moving Average Cases',
 		data: year_average_beds,
-		borderColor: "grey",
-		fill: false,
+		borderColor:  "grey",
+        borderDash: [10,5],
+		fill: false
 		}
         ]
 	},
@@ -425,13 +419,14 @@
 		label: 'Daily Number of Patients in Mechanical Ventilation Beds',
 		data: month_beds,
 		borderColor:  "#3e95cd",
-		fill: false,
+		fill: false
 		},
         {
-		label: '7 Day Moving Average',
+		label: '7 Day Moving Average Cases',
 		data: month_average_beds,
-		borderColor: "grey",
-		fill: false,
+		borderColor:  "grey",
+        borderDash: [10,5],
+		fill: false
 		}
         ]
 	},
@@ -462,13 +457,14 @@
 		label: 'Daily Number of Patients in Mechanical Ventilation Beds',
 		data: week_beds,
 		borderColor:  "#3e95cd",
-		fill: false,
+		fill: false
 		},
         {
-		label: '7 Day Moving Average',
+		label: '7 Day Moving Average Cases',
 		data: week_average_beds,
-		borderColor: "grey",
-		fill: false,
+		borderColor:  "grey",
+        borderDash: [10,5],
+		fill: false	
 		}
         ]
 	},
@@ -490,6 +486,5 @@
 	});
 	</script>
 
-	
 </body>
 </html> 
