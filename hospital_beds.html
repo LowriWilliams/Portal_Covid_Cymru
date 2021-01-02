@@ -300,6 +300,29 @@
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
 
+	<script>
+		function setIframeSource() {
+   var theSelect = document.getElementById('location');
+   var theIframe = document.getElementById('myIframe');
+   var theUrl;
+ 
+   theUrl = theSelect.options[theSelect.selectedIndex].value;
+   theIframe.src = theUrl;
+}
+	</script>
+
+	<script>
+		$(document).ready( function () {
+		$('#myTable').DataTable();
+		} );
+	</script>
+
+	<script>
+		$(document).ready(function () {
+		$('#dtBasicExample').DataTable({iDisplayLength: -1});
+	  });
+	</script>
+	
 	<script type='text/javascript'>
 		var year_dates = false;
 		var year_beds = false;
@@ -467,16 +490,6 @@
 	});
 	</script>
 
-	<script>
-		$(document).ready( function () {
-		$('#myTable').DataTable();
-		} );
-	</script>
-
-	<script>
-		$(document).ready(function () {
-		$('#dtBasicExample').DataTable({iDisplayLength: -1});
-	  });
-	</script>
+	
 </body>
 </html> 
