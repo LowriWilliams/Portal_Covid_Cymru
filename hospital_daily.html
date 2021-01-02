@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYQ5ZQJQX9"></script>
 	<script>
@@ -30,6 +31,7 @@
    	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
    	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 
+	
 </head> 
 
 
@@ -82,7 +84,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-chart-bar"></i>&nbsp;&nbsp;Graphs</span>
 
 		                         <span class="submenu-arrow">
@@ -93,7 +95,7 @@
 					        </a><!--//nav-link-->
 					        <div id="submenu-1" class="collapse submenu submenu-1" data-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
-							        <li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
+								<li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="daily.html">Daily Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="forecast.html">Forecasting Data</a></li>
 									<br>
@@ -104,8 +106,8 @@
 							        <li class="submenu-item"><a class="submenu-link" href="cu.html">Cardiff University Asymptomatic Testing</a></li>
 						        </ul>
 					        </div>
-					    </li><!--//nav-item-->
-					    <li class="nav-item has-submenu">
+					    </li><!--//nav-item-->	
+						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-table"></i>&nbsp;&nbsp;Tables</span>
@@ -121,10 +123,10 @@
 							        <li class="submenu-item"><a class="submenu-link" href="uk_table.html">United Kingdom Data</a></li>
 						        </ul>
 					        </div>
-					    </li><!--//nav-item-->		
-						                      <li class="nav-item has-submenu">
+					    </li><!--//nav-item-->	
+                        <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
+					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-ambulance"></i>&nbsp;&nbsp;Hospital Data</span>
 
 		                         <span class="submenu-arrow">
@@ -137,11 +139,11 @@
 						        <ul class="submenu-list list-unstyled">
 									<li class="submenu-item"><a class="submenu-link" href="hospital_cumulative.html">Cumulative Admissions Data</a></li>
 							        <li class="submenu-item"><a class="submenu-link" href="hospital_daily.html">Daily Admissions Data</a></li>
-									<li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
+								    <li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
 						        </ul>
 					        </div>
 					    </li><!--//nav-item-->	
-		    
+                        	    
 				    </ul><!--//app-menu-->
 				</nav><!--//app-nav-->
 
@@ -163,7 +165,7 @@
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
     
-	<div class="app-wrapper">
+    <div class="app-wrapper">
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    <div class="row">
@@ -172,20 +174,29 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Cumulative Positive COVID-19 Cases Across Gender Demographics</h4>
+										<h4 class="app-card-title">Daily Hospital Admissions in Wales</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
 							<div class="app-card-body p-3 p-lg-4">
+								<div class="mb-3 d-flex">   
+									<select id="chartType" class="form-select form-select-sm ml-auto d-inline-flex w-auto">
+										<option value="year">This year</option>
+										<option value="month">This month</option>
+										<option value="week">This week</option>
+									</select>	
+								</div>
 								<div class="chart-container" style="position:relative;width:100%;height:600px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-									<canvas id="ctx"></canvas>
+									<canvas id="yearChart"></canvas>
+									<canvas id="monthChart" ></canvas>
+									<canvas id="weekChart"></canvas>
 								</div>
 							</div><!--//app-card-body-->
 						</div><!--//app-card-->
 					</div><!--//col-->
 				</div>
 			</div>
-		</div>	    
+		</div>
 	    <footer class="app-footer">
 		    <div class="container text-center py-3">
 		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
@@ -205,78 +216,175 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js"></script>
 
-
-	
     <!-- Page Specific JS -->
 	<script src="assets/js/app.js"></script> 
 
-	    <!-- Charts JS -->
 	<script type='text/javascript'>
-		var males = false;
-		var females = false;
-		var dates = false;
+		var year_dates = false;
+		var year_admissions = false;
+		var month_dates = false;
+		var month_admissions = false;
+		var week_dates = false;
+		var week_admissions = false;
+        var year_average_admissions = false;
+        var month_average_admissions = false;
+        var week_average_admissions = false;
+        
 	</script>
-	<script src="assets/js/gender_graph.js"></script> 
+	<script src="assets/js/hospital_daily_graph.js"></script> 
 
+	
 	<script>
-        var marketing = ['23/03/2020', '01/06/2020', '23/10/2020', '09/11/2020', '20/12/2020'];
-		var amount = ["Lockdown begins", "Lockdown ends", "Firebreak begins", "Firebreak ends", "Lockdown begins"];
-		// populate 'annotations' array dynamically based on 'marketing'
-		var annotations = marketing.map(function(date, index) {
-		   return {
-			  type: 'line',
-			  id: 'vline' + index,
-			  mode: 'vertical',
-			  scaleID: 'x-axis-0',
-			  value: date,
-			  borderColor: 'grey',
-			  borderWidth: 1,
-			  borderDash: [10,5],
-			  label: {
-				 enabled: true,
-				 position: "center",
-				 content: amount[index],
-				 fontSize: 6,
-			  }
-		   }
-		});
+		let select = document.querySelector('#chartType');
+		// concat Chart for the canvas ID
+		let chart = select.options[select.selectedIndex].value + 'Chart'; 
 		
-		var chart = new Chart(ctx, {
-		   type: 'line',
-		   data: {
-			  labels: dates,
-			  datasets: [{
-				label: 'Males',
-				data: males,
-				borderColor:  "#3e95cd",
-				fill: false,
-				},
-				{
-				label: 'Females',
-				data: females,
-				borderColor:  "#cd3e4e",
-				fill: false
+		document.querySelectorAll('canvas').forEach(c => {c.style.display = (c.id === chart)? 'inherit' : 'none';})
+
+		select.addEventListener('change', showHide);
+
+	function showHide() {
+	// concat Chart for the canvas ID
+	let chart = this.options[select.selectedIndex].value + 'Chart';
+		document.querySelectorAll('canvas')
+		.forEach(c => {
+		c.style.display = (c.id === chart) ? 'inherit' : 'none';
+		})
+	}
+
+	// Year
+	var marketing = ['23-03-2020', '01-06-2020', '23-10-2020', '09-11-2020', '20-12-2020'];
+	var amount = ["Lockdown begins", "Lockdown ends", "Firebreak begins", "Firebreak ends", "Lockdown begins"];
+	// populate 'annotations' array dynamically based on 'marketing'
+	var annotations = marketing.map(function(date, index) {
+		return {
+			type: 'line',
+			id: 'vline' + index,
+			mode: 'vertical',
+			scaleID: 'x-axis-0',
+			value: date,
+			borderColor: 'grey',
+			borderWidth: 1,
+			borderDash: [10,5],
+			label: {
+				enabled: true,
+				position: "center",
+				content: amount[index],
+				fontSize: 6,
+			}
+		}
+	});
+
+	var ctx = document.getElementById("yearChart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: year_dates,
+		datasets: [{
+		label: 'Daily Admissions',
+		data: year_admissions,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+        {
+		label: '7 Day Moving Average',
+		data: year_average_admissions,
+		borderColor: "grey",
+		fill: false,
+		}
+        ]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
 				}
-				]
-		   },
-		   options: {
-			  maintainAspectRatio: false,
-			  responsive:true,
-			  scales: {
-				 yAxes: [{
-					ticks: {
-					   beginAtZero: true
-					}
-				 }]
-			  },
-			  annotation: {
-				 drawTime: 'afterDatasetsDraw',
-				 annotations: annotations
-			  }
-		   }
-		});
-		
-</script>
+			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
+		}
+	}
+	});
+
+	// Month
+	var ctx = document.getElementById("monthChart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: month_dates,
+		datasets: [{
+		label: 'Daily Admissions',
+		data: month_admissions,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+        {
+		label: '7 Day Moving Average',
+		data: month_average_admissions,
+		borderColor: "grey",
+		fill: false,
+		}
+        ]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
+		}
+	}
+	});
+
+	// Week
+	var ctx = document.getElementById("weekChart");
+	var lineChart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: week_dates,
+		datasets: [{
+		label: 'Daily Admissions',
+		data: week_admissions,
+		borderColor:  "#3e95cd",
+		fill: false,
+		},
+        {
+		label: '7 Day Moving Average',
+		data: week_average_admissions,
+		borderColor: "grey",
+		fill: false,
+		}
+        ]
+	},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		},
+		annotation: {
+			drawTime: 'afterDatasetsDraw',
+			annotations: annotations
+		}
+	}
+	});
+	</script>
 
 </body>
 </html> 
