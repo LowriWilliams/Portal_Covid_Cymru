@@ -53,7 +53,7 @@
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
         </div>	   	            
-        <div id="app-sidepanel" class="app-sidepanel"> 
+		<div id="app-sidepanel" class="app-sidepanel"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
@@ -84,7 +84,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-chart-bar"></i>&nbsp;&nbsp;Graphs</span>
 
 		                         <span class="submenu-arrow">
@@ -95,18 +95,12 @@
 					        </a><!--//nav-link-->
 					        <div id="submenu-1" class="collapse submenu submenu-1" data-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
-								<li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
+							       	<li class="submenu-item"><a class="submenu-link" href="cumulative.html">Cumulative Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="daily.html">Daily Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="forecast.html">Forecasting Data</a></li>
-									<br>
-									<li class="submenu-item"><a class="submenu-link" href="age.html">Daily Age Distribution</a></li>
-									<li class="submenu-item"><a class="submenu-link" href="gender.html">Cumulative Gender Distribution</a></li>
-									<li class="submenu-item"><a class="submenu-link" href="gender_age.html">Cumulative Gender and Age Distribution</a></li>
-									<br>
-							        <li class="submenu-item"><a class="submenu-link" href="cu.html">Cardiff University Asymptomatic Testing</a></li>
 						        </ul>
 					        </div>
-					    </li><!--//nav-item-->	
+					    </li><!--//nav-item-->		
 						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
@@ -123,10 +117,11 @@
 							        <li class="submenu-item"><a class="submenu-link" href="uk_table.html">United Kingdom Data</a></li>
 						        </ul>
 					        </div>
-					    </li><!--//nav-item-->	
-						                      <li class="nav-item has-submenu">
+					    </li><!--//nav-item-->		
+
+						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
+					        <a class="nav-link  submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-ambulance"></i>&nbsp;&nbsp;Hospital Data</span>
 
 		                         <span class="submenu-arrow">
@@ -136,18 +131,43 @@
 	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
 					        <div id="submenu-3" class="collapse submenu submenu-1" data-parent="#menu-accordion">
-						        <ul class="submenu-list list-unstyled">
+						       <ul class="submenu-list list-unstyled">
                                 	<li class="submenu-item"><a class="submenu-link" href="daily_health_board.html">Daily Admissions Across Health Boards</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="cumulative_health_board.html">Cumulaltive Admissions Across Health Boards</a></li>
 									<br>
-							       	<li class="submenu-item"><a class="submenu-link" href="hospital_daily.html">All Daily COVID-19 Admissions Data</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="hospital_daily.html">All Daily COVID-19 Admissions Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="different_admissions.html">Cumulative Admission Types Data</a></li>
 									<br>
 						            <li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="ppe.html">PPE Data</a></li>
 								</ul>
 					        </div>
-					    </li><!--//nav-item-->				    
+						</li><!--//nav-item-->		
+						<li class="nav-item has-submenu">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-4" aria-expanded="false" aria-controls="submenu-1">
+								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-venus-mars"></i>&nbsp;&nbsp;Gender and Age</span>
+
+		                         <span class="submenu-arrow">
+		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+	</svg>
+	                             </span><!--//submenu-arrow-->
+					        </a><!--//nav-link-->
+					        <div id="submenu-4" class="collapse submenu submenu-4" data-parent="#menu-accordion">
+						        <ul class="submenu-list list-unstyled">
+									<li class="submenu-item"><a class="submenu-link" href="age.html">Daily Age Distribution</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="gender.html">Cumulative Gender Distribution</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="gender_age.html">Cumulative Gender and Age Distribution</a></li>
+						        </ul>
+					        </div>
+						</li><!--//nav-item-->	 
+						<li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link" href="cu.html">
+								 <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-graduation-cap"></i>&nbsp;&nbsp;Cardiff University</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->   
 				    </ul><!--//app-menu-->
 				</nav><!--//app-nav-->
 
