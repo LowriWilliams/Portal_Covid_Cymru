@@ -111,7 +111,7 @@
 					    </li><!--//nav-item-->	
                         <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-table"></i>&nbsp;&nbsp;Tables</span>
 
 		                         <span class="submenu-arrow">
@@ -128,7 +128,7 @@
 					    </li><!--//nav-item-->	
 						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
+					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-ambulance"></i>&nbsp;&nbsp;Hospital Data</span>
 
 		                         <span class="submenu-arrow">
@@ -138,7 +138,7 @@
 	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
 					        <div id="submenu-3" class="collapse submenu submenu-1" data-parent="#menu-accordion">
-						       <ul class="submenu-list list-unstyled">
+						        <ul class="submenu-list list-unstyled">
                                 	<li class="submenu-item"><a class="submenu-link" href="daily_health_board.html">Daily Admissions Across Health Boards</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="cumulative_health_board.html">Cumulaltive Admissions Across Health Boards</a></li>
 									<br>
@@ -181,7 +181,7 @@
                             <div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">United Kingdom Data as of 01/01/2021</h4>
+										<h4 class="app-card-title">Cumulative NHS COVID-19 Hospital Admissions by Local Health Board</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -192,56 +192,182 @@
 											
 											  <thead>
 <tr>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Nation</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Population</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>New Cases</th>
+      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Health Board</th>
+      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Local Authority</th>
+      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Population (2019)</th>
+      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Local Health Board Admissions</th>
+      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Local Health Board Deaths</th>
       <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Cases</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>New Tests</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Tests</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>New Deaths</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Deaths</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td class="cell">England</td>
-      <td class="cell">67,886,011</td>
-      <td class="cell">50,746</td>
-      <td class="cell">2,110,349</td>
-      <td class="cell">362,497</td>
-      <td class="cell">36,780,418</td>
-      <td class="cell">366</td>
-      <td class="cell">65,788</td>
+      <td class="cell">Aneurin Bevan University Health Board</td>
+      <td class="cell">Torfaen</td>
+      <td class="cell">93961</td>
+      <td class="cell">4906</td>
+      <td class="cell">720</td>
+      <td class="cell">5030</td>
     </tr>
     <tr>
-      <td class="cell">Northern Ireland</td>
-      <td class="cell">1,890,000</td>
-      <td class="cell">0</td>
-      <td class="cell">71,800</td>
-      <td class="cell">20,613</td>
-      <td class="cell">1,033,953</td>
-      <td class="cell">13</td>
-      <td class="cell">1,349</td>
+      <td class="cell">Aneurin Bevan University Health Board</td>
+      <td class="cell">Monmouthshire</td>
+      <td class="cell">94590</td>
+      <td class="cell">4906</td>
+      <td class="cell">720</td>
+      <td class="cell">3236</td>
     </tr>
     <tr>
-      <td class="cell">Scotland</td>
-      <td class="cell">5,460,000</td>
-      <td class="cell">2,539</td>
-      <td class="cell">127,747</td>
-      <td class="cell">21,451</td>
-      <td class="cell">3,342,069</td>
-      <td class="cell">1</td>
-      <td class="cell">4,633</td>
+      <td class="cell">Aneurin Bevan University Health Board</td>
+      <td class="cell">Caerphilly</td>
+      <td class="cell">181075</td>
+      <td class="cell">4906</td>
+      <td class="cell">720</td>
+      <td class="cell">10797</td>
     </tr>
     <tr>
-      <td class="cell">Wales</td>
-      <td class="cell">3,136,000</td>
-      <td class="cell">0</td>
-      <td class="cell">147,708</td>
-      <td class="cell">0</td>
-      <td class="cell">1,710,954</td>
-      <td class="cell">19</td>
-      <td class="cell">3,649</td>
+      <td class="cell">Aneurin Bevan University Health Board</td>
+      <td class="cell">Blaenau Gwent</td>
+      <td class="cell">69862</td>
+      <td class="cell">4906</td>
+      <td class="cell">720</td>
+      <td class="cell">5298</td>
+    </tr>
+    <tr>
+      <td class="cell">Aneurin Bevan University Health Board</td>
+      <td class="cell">Newport</td>
+      <td class="cell">154676</td>
+      <td class="cell">4906</td>
+      <td class="cell">720</td>
+      <td class="cell">8683</td>
+    </tr>
+    <tr>
+      <td class="cell">Betsi Cadwaladr University Health Board</td>
+      <td class="cell">Anglesey</td>
+      <td class="cell">70043</td>
+      <td class="cell">4387</td>
+      <td class="cell">595</td>
+      <td class="cell">1271</td>
+    </tr>
+    <tr>
+      <td class="cell">Betsi Cadwaladr University Health Board</td>
+      <td class="cell">Flintshire</td>
+      <td class="cell">156100</td>
+      <td class="cell">4387</td>
+      <td class="cell">595</td>
+      <td class="cell">5774</td>
+    </tr>
+    <tr>
+      <td class="cell">Betsi Cadwaladr University Health Board</td>
+      <td class="cell">Denbighshire</td>
+      <td class="cell">95696</td>
+      <td class="cell">4387</td>
+      <td class="cell">595</td>
+      <td class="cell">2833</td>
+    </tr>
+    <tr>
+      <td class="cell">Betsi Cadwaladr University Health Board</td>
+      <td class="cell">Conwy</td>
+      <td class="cell">117203</td>
+      <td class="cell">4387</td>
+      <td class="cell">595</td>
+      <td class="cell">2374</td>
+    </tr>
+    <tr>
+      <td class="cell">Betsi Cadwaladr University Health Board</td>
+      <td class="cell">Gwynedd</td>
+      <td class="cell">124560</td>
+      <td class="cell">4387</td>
+      <td class="cell">595</td>
+      <td class="cell">1819</td>
+    </tr>
+    <tr>
+      <td class="cell">Cardiff and Vale University Health Board</td>
+      <td class="cell">Cardiff</td>
+      <td class="cell">366903</td>
+      <td class="cell">4769</td>
+      <td class="cell">497</td>
+      <td class="cell">20667</td>
+    </tr>
+    <tr>
+      <td class="cell">Cardiff and Vale University Health Board</td>
+      <td class="cell">The Vale of Glamorgan</td>
+      <td class="cell">133587</td>
+      <td class="cell">4769</td>
+      <td class="cell">497</td>
+      <td class="cell">5579</td>
+    </tr>
+    <tr>
+      <td class="cell">Cwm Taf Morgannwg University Health Board</td>
+      <td class="cell">Bridgend</td>
+      <td class="cell">147049</td>
+      <td class="cell">5025</td>
+      <td class="cell">1054</td>
+      <td class="cell">10413</td>
+    </tr>
+    <tr>
+      <td class="cell">Cwm Taf Morgannwg University Health Board</td>
+      <td class="cell">Merthyr Tydfil</td>
+      <td class="cell">60326</td>
+      <td class="cell">5025</td>
+      <td class="cell">1054</td>
+      <td class="cell">5667</td>
+    </tr>
+    <tr>
+      <td class="cell">Cwm Taf Morgannwg University Health Board</td>
+      <td class="cell">Rhondda Cynon Taf</td>
+      <td class="cell">241264</td>
+      <td class="cell">5025</td>
+      <td class="cell">1054</td>
+      <td class="cell">18140</td>
+    </tr>
+    <tr>
+      <td class="cell">Hywel Dda University Health Board</td>
+      <td class="cell">Ceredigion</td>
+      <td class="cell">72695</td>
+      <td class="cell">2890</td>
+      <td class="cell">250</td>
+      <td class="cell">1329</td>
+    </tr>
+    <tr>
+      <td class="cell">Hywel Dda University Health Board</td>
+      <td class="cell">Pembrokeshire</td>
+      <td class="cell">125818</td>
+      <td class="cell">2890</td>
+      <td class="cell">250</td>
+      <td class="cell">2309</td>
+    </tr>
+    <tr>
+      <td class="cell">Hywel Dda University Health Board</td>
+      <td class="cell">Carmarthenshire</td>
+      <td class="cell">188771</td>
+      <td class="cell">2890</td>
+      <td class="cell">250</td>
+      <td class="cell">8198</td>
+    </tr>
+    <tr>
+      <td class="cell">Powys Teaching Health Board</td>
+      <td class="cell">Powys</td>
+      <td class="cell">132435</td>
+      <td class="cell">9</td>
+      <td class="cell">36</td>
+      <td class="cell">2654</td>
+    </tr>
+    <tr>
+      <td class="cell">Swansea Bay University Health Board</td>
+      <td class="cell">Swansea</td>
+      <td class="cell">246993</td>
+      <td class="cell">2364</td>
+      <td class="cell">580</td>
+      <td class="cell">14615</td>
+    </tr>
+    <tr>
+      <td class="cell">Swansea Bay University Health Board</td>
+      <td class="cell">Neath Port Talbot</td>
+      <td class="cell">143315</td>
+      <td class="cell">2364</td>
+      <td class="cell">580</td>
+      <td class="cell">9606</td>
     </tr>
   </tbody>
 														
@@ -250,13 +376,6 @@
 									</div>
 								</div>
 							</div><!--//app-card-body-->
-							<div class="app-card-header p-3">
-								<div class="row justify-content-between align-items-center">
-									<div class="col-auto">
-										<h4 class="app-card-title">United Kingdom Daily Cases</h4>
-									</div><!--//col-->
-								</div><!--//row-->
-							</div>
 							<div class="app-card-body p-3 p-lg-4">
 								<div class="chart-container" style="position:relative;width:100%;height:600px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
 									<canvas id="ctx"></canvas>
@@ -265,7 +384,7 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<p>Data accessed from <a href="https://coronavirus.data.gov.uk/details/download">GOV.UK Coronavirus (COVID-19) in the UK</a>.</p>
+                                        <p>Table data accessed from <a href="https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary">Public Health Wales</a>. Graph accessed from <a href="https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Hospital-Activity/nhs-activity-and-capacity-during-the-coronavirus-pandemic/admissions-by-localhealthboard-patientype">Stats Wales</a>.</p>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -317,15 +436,18 @@
 	    <!-- Charts JS -->
 	<script type='text/javascript'>
 		var dates = false;
-		var scotland = false;
-		var england = false;
-		var wales = false;
-		var ireland = false;
+		var betsi_cum = false;
+		var hywel_cum = false;
+		var powys_cum = false;
+		var swansea_cum = false;
+        var cardiff_cum = false;
+		var cwmtaf_cum = false;
+		var aneurin_cum = false;
 	</script>
-	<script src="assets/js/uk_graph.js"></script> 
+	<script src="assets/js/cum_health_board_graph.js"></script> 
 
 	<script>
-		var marketing = ['23-03-2020', '01-06-2020', '23-10-2020', '09-11-2020', '20-12-2020'];
+		var marketing = ['23/03/2020', '01/06/2020', '23/10/2020', '09/11/2020', '20/12/2020'];
 		var amount = ["Lockdown begins", "Lockdown ends", "Firebreak begins", "Firebreak ends", "Lockdown begins"];
 		// populate 'annotations' array dynamically based on 'marketing'
 		var annotations = marketing.map(function(date, index) {
@@ -352,29 +474,48 @@
 		   data: {
 			  labels: dates,
 			  datasets: [{
-			label: "Scotland",
-			data: scotland,
+			label: "Betsi Cadwaladr",
+			data: betsi_cum,
 			borderColor: "#3e95cd",
 			fill: false,
 			},
 			{
-			label: "Wales",
-			data: wales,
+			label: "Powys",
+			data: powys_cum,
 			borderColor: "#cd3e4e",
 			fill: false,
 			},
 			{
-			label: "Northern Ireland",
-			data: ireland,
+			label: "Hywel Dda",
+			data: hywel_cum,
 			borderColor: "#3ecd76",
 			fill: false,
 			},
 			{
-			label: "England",
-			data: england,
+			label: "Swansea Bay",
+			data: swansea_cum,
 			borderColor: "#ffd500",
 			fill: false,
-			}]
+			},
+            {
+			label: "Cwm Taf Morgannwg",
+			data: cwmtaf_cum,
+			borderColor: "#00ffd5",
+			fill: false,
+			},
+            {
+			label: "Aneurin Bevan",
+			data: aneurin_cum,
+			borderColor: "#ff00aa",
+			fill: false,
+			},
+            {
+			label: "Cardiff and Vale",
+			data: cardiff_cum,
+			borderColor: "#9500b3",
+			fill: false,
+			},
+            ]
 		   },
 		   options: {
 			  maintainAspectRatio: false,

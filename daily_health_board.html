@@ -111,7 +111,7 @@
 					    </li><!--//nav-item-->	
                         <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-table"></i>&nbsp;&nbsp;Tables</span>
 
 		                         <span class="submenu-arrow">
@@ -128,7 +128,7 @@
 					    </li><!--//nav-item-->	
 						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
+					        <a class="nav-link active submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
 								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-ambulance"></i>&nbsp;&nbsp;Hospital Data</span>
 
 		                         <span class="submenu-arrow">
@@ -138,7 +138,7 @@
 	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
 					        <div id="submenu-3" class="collapse submenu submenu-1" data-parent="#menu-accordion">
-						       <ul class="submenu-list list-unstyled">
+						        <ul class="submenu-list list-unstyled">
                                 	<li class="submenu-item"><a class="submenu-link" href="daily_health_board.html">Daily Admissions Across Health Boards</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="cumulative_health_board.html">Cumulaltive Admissions Across Health Boards</a></li>
 									<br>
@@ -181,79 +181,7 @@
                             <div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">United Kingdom Data as of 01/01/2021</h4>
-									</div><!--//col-->
-								</div><!--//row-->
-							</div>
-							<div class="app-card-body p-3 p-lg-4">
-								<div class="chart-container" style="width:100%;overflow:auto;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-									<div class="table-responsive" style='font-size:9pt;'>
-										<table class="table app-table-hover mb-0 text-left" id="dtBasicExample">
-											
-											  <thead>
-<tr>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Nation</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Population</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>New Cases</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Cases</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>New Tests</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Tests</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>New Deaths</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Deaths</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="cell">England</td>
-      <td class="cell">67,886,011</td>
-      <td class="cell">50,746</td>
-      <td class="cell">2,110,349</td>
-      <td class="cell">362,497</td>
-      <td class="cell">36,780,418</td>
-      <td class="cell">366</td>
-      <td class="cell">65,788</td>
-    </tr>
-    <tr>
-      <td class="cell">Northern Ireland</td>
-      <td class="cell">1,890,000</td>
-      <td class="cell">0</td>
-      <td class="cell">71,800</td>
-      <td class="cell">20,613</td>
-      <td class="cell">1,033,953</td>
-      <td class="cell">13</td>
-      <td class="cell">1,349</td>
-    </tr>
-    <tr>
-      <td class="cell">Scotland</td>
-      <td class="cell">5,460,000</td>
-      <td class="cell">2,539</td>
-      <td class="cell">127,747</td>
-      <td class="cell">21,451</td>
-      <td class="cell">3,342,069</td>
-      <td class="cell">1</td>
-      <td class="cell">4,633</td>
-    </tr>
-    <tr>
-      <td class="cell">Wales</td>
-      <td class="cell">3,136,000</td>
-      <td class="cell">0</td>
-      <td class="cell">147,708</td>
-      <td class="cell">0</td>
-      <td class="cell">1,710,954</td>
-      <td class="cell">19</td>
-      <td class="cell">3,649</td>
-    </tr>
-  </tbody>
-														
-
-										</table>
-									</div>
-								</div>
-							</div><!--//app-card-body-->
-							<div class="app-card-header p-3">
-								<div class="row justify-content-between align-items-center">
-									<div class="col-auto">
-										<h4 class="app-card-title">United Kingdom Daily Cases</h4>
+										<h4 class="app-card-title">Daily NHS COVID-19 Hospital Admissions by Local Health Board</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -265,7 +193,7 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<p>Data accessed from <a href="https://coronavirus.data.gov.uk/details/download">GOV.UK Coronavirus (COVID-19) in the UK</a>.</p>
+                                        <p>Data accessed from <a href="https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Hospital-Activity/nhs-activity-and-capacity-during-the-coronavirus-pandemic/admissions-by-localhealthboard-patientype">Stats Wales</a>.</p>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -317,12 +245,15 @@
 	    <!-- Charts JS -->
 	<script type='text/javascript'>
 		var dates = false;
-		var scotland = false;
-		var england = false;
-		var wales = false;
-		var ireland = false;
+		var betsi = false;
+		var hywel = false;
+		var powys = false;
+		var swansea = false;
+        var cardiff = false;
+		var cwmtaf = false;
+		var aneurin = false;
 	</script>
-	<script src="assets/js/uk_graph.js"></script> 
+	<script src="assets/js/health_board_graph.js"></script> 
 
 	<script>
 		var marketing = ['23-03-2020', '01-06-2020', '23-10-2020', '09-11-2020', '20-12-2020'];
@@ -352,29 +283,48 @@
 		   data: {
 			  labels: dates,
 			  datasets: [{
-			label: "Scotland",
-			data: scotland,
+			label: "Betsi Cadwaladr",
+			data: betsi,
 			borderColor: "#3e95cd",
 			fill: false,
 			},
 			{
-			label: "Wales",
-			data: wales,
+			label: "Powys",
+			data: powys,
 			borderColor: "#cd3e4e",
 			fill: false,
 			},
 			{
-			label: "Northern Ireland",
-			data: ireland,
+			label: "Hywel Dda",
+			data: hywel,
 			borderColor: "#3ecd76",
 			fill: false,
 			},
 			{
-			label: "England",
-			data: england,
+			label: "Swansea Bay",
+			data: swansea,
 			borderColor: "#ffd500",
 			fill: false,
-			}]
+			},
+            {
+			label: "Cwm Taf Morgannwg",
+			data: cwmtaf,
+			borderColor: "#00ffd5",
+			fill: false,
+			},
+            {
+			label: "Aneurin Bevan",
+			data: aneurin,
+			borderColor: "#ff00aa",
+			fill: false,
+			},
+            {
+			label: "Cardiff and Vale",
+			data: cardiff,
+			borderColor: "#9500b3",
+			fill: false,
+			},
+            ]
 		   },
 		   options: {
 			  maintainAspectRatio: false,
