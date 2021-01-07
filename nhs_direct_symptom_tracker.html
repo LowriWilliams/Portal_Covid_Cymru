@@ -25,21 +25,19 @@
     
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
-		
-	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
-   	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
-   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
-   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 
-	<style>
-	.dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
-	</style>	
+	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+   	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+   	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+   	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+
+	
 </head> 
 
 
 
 <body class="app">   	
-    <header class="app-header fixed-top">	  
+    <header class="app-header fixed-top">
 		<div class="app-header-inner">  
 	        <div class="container-fluid py-2">
 		        <div class="app-header-content"> 
@@ -54,7 +52,7 @@
 		        	</div><!--//row-->
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
-        </div>   	 	            
+        </div>	   	            
 		<div id="app-sidepanel" class="app-sidepanel"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
@@ -142,8 +140,8 @@
 									<br>
 						            <li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="ppe.html">PPE Data</a></li>
-									<br>
-									<li class="submenu-item"><a class="submenu-link" href="nhs_direct_symptom_tracker.html">NHS Direct Symptom Tracker Data</a></li>
+                                    <br>
+                                    <li class="submenu-item"><a class="submenu-link" href="nhs_direct_symptom_tracker.html">NHS Direct Symptom Tracker Data</a></li>
 								</ul>
 					        </div>
 						</li><!--//nav-item-->		
@@ -171,13 +169,13 @@
 					        <a class="nav-link" href="cu.html">
 								 <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-graduation-cap"></i>&nbsp;&nbsp;Cardiff University</span>
 					        </a><!--//nav-link-->
-					    </li><!--//nav-item--> 
+					    </li><!--//nav-item-->   
 						<li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link" href="data_information.html">
 								 <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-info-circle"></i>&nbsp;&nbsp;Data Information</span>
 					        </a><!--//nav-link-->
-					    </li><!--//nav-item-->     
+					    </li><!--//nav-item-->   
 				    </ul><!--//app-menu-->
 				</nav><!--//app-nav-->
 
@@ -199,368 +197,105 @@
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
     
-	<div class='app-wrapper'>
-		<div class="app-content pt-3 p-md-3 p-lg-4">
+    <div class="app-wrapper">
+	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
-						    
-				<div class="row">
+			    <div class="row">
 					<div class="col">
 						<div class="app-card app-card-chart h-100 shadow-sm">
-                            <div class="app-card-header p-3">
+							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Cumulative NHS COVID-19 Hospital Admissions by Local Health Board</h4>
+										<h4 class="app-card-title">Visits to the NHS Direct Wales Online Symptom Checker</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
 							<div class="app-card-body p-3 p-lg-4">
-								<div class="chart-container" style="width:100%;overflow:auto;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-									<div class="table-responsive" style='font-size:9pt;'>
-										<table class="table app-table-hover mb-0 text-left" id="dtBasicExample">
-											
-											  <thead>
-<tr>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Health Board</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Local Authority</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Population (2019)</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Local Health Board Admissions</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Local Health Board Deaths</th>
-      <th class="cell" style="width:20px;"><span style="float:right;"><i class="fas fa-sort"></i></span>Cumulative Cases</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="cell">Aneurin Bevan University Health Board</td>
-      <td class="cell">Torfaen</td>
-      <td class="cell">93961</td>
-      <td class="cell">4865</td>
-      <td class="cell">727</td>
-      <td class="cell">5103</td>
-    </tr>
-    <tr>
-      <td class="cell">Aneurin Bevan University Health Board</td>
-      <td class="cell">Monmouthshire</td>
-      <td class="cell">94590</td>
-      <td class="cell">4865</td>
-      <td class="cell">727</td>
-      <td class="cell">3281</td>
-    </tr>
-    <tr>
-      <td class="cell">Aneurin Bevan University Health Board</td>
-      <td class="cell">Caerphilly</td>
-      <td class="cell">181075</td>
-      <td class="cell">4865</td>
-      <td class="cell">727</td>
-      <td class="cell">10886</td>
-    </tr>
-    <tr>
-      <td class="cell">Aneurin Bevan University Health Board</td>
-      <td class="cell">Blaenau Gwent</td>
-      <td class="cell">69862</td>
-      <td class="cell">4865</td>
-      <td class="cell">727</td>
-      <td class="cell">5357</td>
-    </tr>
-    <tr>
-      <td class="cell">Aneurin Bevan University Health Board</td>
-      <td class="cell">Newport</td>
-      <td class="cell">154676</td>
-      <td class="cell">4865</td>
-      <td class="cell">727</td>
-      <td class="cell">8765</td>
-    </tr>
-    <tr>
-      <td class="cell">Betsi Cadwaladr University Health Board</td>
-      <td class="cell">Anglesey</td>
-      <td class="cell">70043</td>
-      <td class="cell">4357</td>
-      <td class="cell">602</td>
-      <td class="cell">1274</td>
-    </tr>
-    <tr>
-      <td class="cell">Betsi Cadwaladr University Health Board</td>
-      <td class="cell">Flintshire</td>
-      <td class="cell">156100</td>
-      <td class="cell">4357</td>
-      <td class="cell">602</td>
-      <td class="cell">5893</td>
-    </tr>
-    <tr>
-      <td class="cell">Betsi Cadwaladr University Health Board</td>
-      <td class="cell">Denbighshire</td>
-      <td class="cell">95696</td>
-      <td class="cell">4357</td>
-      <td class="cell">602</td>
-      <td class="cell">2880</td>
-    </tr>
-    <tr>
-      <td class="cell">Betsi Cadwaladr University Health Board</td>
-      <td class="cell">Conwy</td>
-      <td class="cell">117203</td>
-      <td class="cell">4357</td>
-      <td class="cell">602</td>
-      <td class="cell">2416</td>
-    </tr>
-    <tr>
-      <td class="cell">Betsi Cadwaladr University Health Board</td>
-      <td class="cell">Gwynedd</td>
-      <td class="cell">124560</td>
-      <td class="cell">4357</td>
-      <td class="cell">602</td>
-      <td class="cell">1832</td>
-    </tr>
-    <tr>
-      <td class="cell">Cardiff and Vale University Health Board</td>
-      <td class="cell">Cardiff</td>
-      <td class="cell">366903</td>
-      <td class="cell">4734</td>
-      <td class="cell">510</td>
-      <td class="cell">20807</td>
-    </tr>
-    <tr>
-      <td class="cell">Cardiff and Vale University Health Board</td>
-      <td class="cell">The Vale of Glamorgan</td>
-      <td class="cell">133587</td>
-      <td class="cell">4734</td>
-      <td class="cell">510</td>
-      <td class="cell">5657</td>
-    </tr>
-    <tr>
-      <td class="cell">Cwm Taf Morgannwg University Health Board</td>
-      <td class="cell">Bridgend</td>
-      <td class="cell">147049</td>
-      <td class="cell">4996</td>
-      <td class="cell">1076</td>
-      <td class="cell">10491</td>
-    </tr>
-    <tr>
-      <td class="cell">Cwm Taf Morgannwg University Health Board</td>
-      <td class="cell">Merthyr Tydfil</td>
-      <td class="cell">60326</td>
-      <td class="cell">4996</td>
-      <td class="cell">1076</td>
-      <td class="cell">5708</td>
-    </tr>
-    <tr>
-      <td class="cell">Cwm Taf Morgannwg University Health Board</td>
-      <td class="cell">Rhondda Cynon Taf</td>
-      <td class="cell">241264</td>
-      <td class="cell">4996</td>
-      <td class="cell">1076</td>
-      <td class="cell">18261</td>
-    </tr>
-    <tr>
-      <td class="cell">Hywel Dda University Health Board</td>
-      <td class="cell">Ceredigion</td>
-      <td class="cell">72695</td>
-      <td class="cell">2872</td>
-      <td class="cell">254</td>
-      <td class="cell">1347</td>
-    </tr>
-    <tr>
-      <td class="cell">Hywel Dda University Health Board</td>
-      <td class="cell">Pembrokeshire</td>
-      <td class="cell">125818</td>
-      <td class="cell">2872</td>
-      <td class="cell">254</td>
-      <td class="cell">2356</td>
-    </tr>
-    <tr>
-      <td class="cell">Hywel Dda University Health Board</td>
-      <td class="cell">Carmarthenshire</td>
-      <td class="cell">188771</td>
-      <td class="cell">2872</td>
-      <td class="cell">254</td>
-      <td class="cell">8272</td>
-    </tr>
-    <tr>
-      <td class="cell">Powys Teaching Health Board</td>
-      <td class="cell">Powys</td>
-      <td class="cell">132435</td>
-      <td class="cell">9</td>
-      <td class="cell">36</td>
-      <td class="cell">2691</td>
-    </tr>
-    <tr>
-      <td class="cell">Swansea Bay University Health Board</td>
-      <td class="cell">Swansea</td>
-      <td class="cell">246993</td>
-      <td class="cell">2361</td>
-      <td class="cell">590</td>
-      <td class="cell">14704</td>
-    </tr>
-    <tr>
-      <td class="cell">Swansea Bay University Health Board</td>
-      <td class="cell">Neath Port Talbot</td>
-      <td class="cell">143315</td>
-      <td class="cell">2361</td>
-      <td class="cell">590</td>
-      <td class="cell">9706</td>
-    </tr>
-  </tbody>
-														
-
-										</table>
-									</div>
-								</div>
-							</div><!--//app-card-body-->
-							<div class="app-card-body p-3 p-lg-4">
 								<div class="chart-container" style="position:relative;width:100%;height:600px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
 									<canvas id="ctx"></canvas>
+                                    <br>
+                                    <p>There were 384,398 visits searching for 'COVID-19' in March 2020.</p>
 								</div>
 							</div><!--//app-card-body-->
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-                                        <p>Table data accessed from <a href="https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary">Public Health Wales</a>. Graph accessed from <a href="https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Hospital-Activity/nhs-activity-and-capacity-during-the-coronavirus-pandemic/admissions-by-localhealthboard-patientype">Stats Wales</a>.</p>
+                                        <p>&nbsp;&nbsp;Data accessed from <a href="https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/NHS-Direct-Wales/visitstonhsdirectwalesonlinesymptomcheckers-by-month">Stats Wales</a>. This data is last in its series and therefore will not be updated.</p>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
 						</div><!--//app-card-->
 					</div><!--//col-->
-				</div><!--//row-->
+				</div>
 			</div>
-		</div> 
-		<footer class="app-footer">
-			<div class="container text-center py-3">
-				<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+		</div>
+	    <footer class="app-footer">
+		    <div class="container text-center py-3">
+		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
 			<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
 			<script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'D1D31KGYH');kofiwidget2.draw();</script>   
-			</div>
-		</footer><!--//app-footer-->
-		
-	</div><!--//app-wrapper-->    					
+		    </div>
+	    </footer><!--//app-footer-->
+	    
+    </div><!--//app-wrapper-->    					
 
  
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
-	
-    <!-- Page Specific JS -->
-	<script src="assets/js/app.js"></script> 
-
-	<script>
-		function setIframeSource() {
-   var theSelect = document.getElementById('location');
-   var theIframe = document.getElementById('myIframe');
-   var theUrl;
- 
-   theUrl = theSelect.options[theSelect.selectedIndex].value;
-   theIframe.src = theUrl;
-}
-	</script>
-
-	<script>
-		$(document).ready(function () {
-		$('#dtBasicExample').DataTable({iDisplayLength: -1});
-	  });
-	</script>
-
-	<!-- Charts JS -->
+    <!-- Charts JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js"></script>
 
-	    <!-- Charts JS -->
-	<script type='text/javascript'>
-		var dates = false;
-		var betsi_cum = false;
-		var hywel_cum = false;
-		var powys_cum = false;
-		var swansea_cum = false;
-        var cardiff_cum = false;
-		var cwmtaf_cum = false;
-		var aneurin_cum = false;
-	</script>
-	<script src="assets/js/cum_health_board_graph.js"></script> 
+    <!-- Page Specific JS -->
+	<script src="assets/js/app.js"></script> 
 
+	<script type='text/javascript'>
+		var illness = false;
+        var mar19 = false;
+        var mar20 = false;
+	</script>
+	<script src="assets/js/symptom_checker_graph.js"></script> 
+
+	
 	<script>
-		var marketing = ['23/03/2020', '01/06/2020', '23/10/2020', '09/11/2020', '20/12/2020'];
-		var amount = ["Lockdown begins", "Lockdown ends", "Firebreak begins", "Firebreak ends", "Lockdown begins"];
-		// populate 'annotations' array dynamically based on 'marketing'
-		var annotations = marketing.map(function(date, index) {
-		   return {
-			  type: 'line',
-			  id: 'vline' + index,
-			  mode: 'vertical',
-			  scaleID: 'x-axis-0',
-			  value: date,
-			  borderColor: 'grey',
-			  borderWidth: 1,
-			  borderDash: [10,5],
-			  label: {
-				 enabled: true,
-				 position: "center",
-				 content: amount[index],
-				 fontSize: 6,
-			  }
-		   }
-		});
-		
-		var chart = new Chart(ctx, {
-		   type: 'line',
-		   data: {
-			  labels: dates,
-			  datasets: [{
-			label: "Betsi Cadwaladr",
-			data: betsi_cum,
-			borderColor: "#3e95cd",
-			fill: false,
-			},
-			{
-			label: "Powys",
-			data: powys_cum,
-			borderColor: "#cd3e4e",
-			fill: false,
-			},
-			{
-			label: "Hywel Dda",
-			data: hywel_cum,
-			borderColor: "#3ecd76",
-			fill: false,
-			},
-			{
-			label: "Swansea Bay",
-			data: swansea_cum,
-			borderColor: "#ffd500",
-			fill: false,
-			},
-            {
-			label: "Cwm Taf Morgannwg",
-			data: cwmtaf_cum,
-			borderColor: "#00ffd5",
-			fill: false,
-			},
-            {
-			label: "Aneurin Bevan",
-			data: aneurin_cum,
-			borderColor: "#ff00aa",
-			fill: false,
-			},
-            {
-			label: "Cardiff and Vale",
-			data: cardiff_cum,
-			borderColor: "#9500b3",
-			fill: false,
-			},
-            ]
-		   },
-		   options: {
-			  maintainAspectRatio: false,
-			  responsive:true,
-			  scales: {
-				 yAxes: [{
-					ticks: {
-					   beginAtZero: true
-					}
-				 }]
-			  },
-			  annotation: {
-				 drawTime: 'afterDatasetsDraw',
-				 annotations: annotations
-			  }
-		   }
-		});
+var ctx = document.getElementById("ctx").getContext("2d");
+
+var data = {
+  labels: illness,
+  datasets: [{
+    label: "March 2019",
+    backgroundColor: "#3e95cd",
+    data: mar19
+  }, {
+    label: "March 2020",
+    backgroundColor: "#cd3e4e",
+    data: mar20
+  }]
+};
+
+var myBarChart = new Chart(ctx, {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+        }
+      }],
+      xAxes: [{
+        ticks: {
+            autoSkip: false,
+            maxRotation: 50,
+            minRotation: 50
+        }
+    }]
+    }
+  }
+});
+
 </script>
 
 </body>
