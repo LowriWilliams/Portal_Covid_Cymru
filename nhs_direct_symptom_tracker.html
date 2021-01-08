@@ -140,6 +140,7 @@
 									<br>
 						            <li class="submenu-item"><a class="submenu-link" href="hospital_beds.html">Ventilation Beds Data</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="ppe.html">PPE Data</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="nhs_workers.html">NHS Staff Absences Data</a></li>
                                     <br>
                                     <li class="submenu-item"><a class="submenu-link" href="nhs_direct_symptom_tracker.html">NHS Direct Symptom Tracker Data</a></li>
 								</ul>
@@ -220,8 +221,10 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
+										<p>&nbsp;&nbsp;There were 384,398 visits searching for 'COVID-19' in March 2020.</p>
+										<br>
                                         <p>&nbsp;&nbsp;Data accessed from <a href="https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/NHS-Direct-Wales/visitstonhsdirectwalesonlinesymptomcheckers-by-month">Stats Wales</a>. This data is last in its series and therefore will not be updated.</p>
-									</div><!--//col-->
+									</div><!--//col-->									
 								</div><!--//row-->
 							</div>
 						</div><!--//app-card-->
@@ -265,43 +268,43 @@
 
 	
 	<script>
-var ctx = document.getElementById("ctx").getContext("2d");
+	var ctx = document.getElementById("ctx");
 
-var data = {
-  labels: illness,
-  datasets: [{
-    label: "March 2019",
-    backgroundColor: "#3e95cd",
-    data: mar19
-  }, {
-    label: "March 2020",
-    backgroundColor: "#cd3e4e",
-    data: mar20
-  }]
-};
+	var myBarChart = new Chart(ctx, {
+	type: 'bar',
+	data: {
+		labels: illness,
+			datasets: [{
+				label: "March 2019",
+				backgroundColor: "#3e95cd",
+				data: mar19
+				}, {
+				label: "March 2020",
+				backgroundColor: "#cd3e4e",
+				data: mar20
+				}]
+		},
+	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		scales: {
+		yAxes: [{
+			ticks: {
+			min: 0,
+			}
+		}],
+		xAxes: [{
+			ticks: {
+				autoSkip: false,
+				maxRotation: 50,
+				minRotation: 50
+			}
+		}]
+		}
+	}
+	});
 
-var myBarChart = new Chart(ctx, {
-  type: 'bar',
-  data: data,
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          min: 0,
-        }
-      }],
-      xAxes: [{
-        ticks: {
-            autoSkip: false,
-            maxRotation: 50,
-            minRotation: 50
-        }
-    }]
-    }
-  }
-});
-
-</script>
+	</script>
 
 </body>
 </html> 
