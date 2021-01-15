@@ -26,14 +26,27 @@
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 		
-	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
-   	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
-   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
-   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.dataTables.min.css">
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.rawgit.com/ashl1/datatables-rowsgroup/fbd569b8768155c7a9a62568e66a64115887d7d0/dataTables.rowsGroup.js"></script>
+
+    <script type="text/javascript" class="init">
+	$(document).ready(function() {
+        var table = $('#dtBasicExample').DataTable({
+        'rowsGroup': [0,3,4],
+        iDisplayLength: -1
+        });   
+    });
+    </script>
 
 	<style>
-	.dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
-	</style>	
+	.dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
+    .dataTables_filter {text-align: left !important;float: left !important;}
+    table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {background : none;}
+	</style>		
 </head> 
 
 
@@ -117,6 +130,7 @@
 					        <div id="submenu-2" class="collapse submenu submenu-1" data-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
 							        <li class="submenu-item"><a class="submenu-link" href="uk_table.html">United Kingdom Data</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="world_table.html">World Data</a></li>
 						        </ul>
 					        </div>
 					    </li><!--//nav-item-->		
@@ -148,12 +162,24 @@
 								</ul>
 					        </div>
 						</li><!--//nav-item-->
-						<li class="nav-item">
+						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="health_board_vaccinations.html">
-								 <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-syringe"></i>&nbsp;&nbsp;Vaccination Data</span>
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-5" aria-expanded="false" aria-controls="submenu-5">
+								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-syringe"></i>&nbsp;&nbsp;Vaccination Data</span>
+
+		                         <span class="submenu-arrow">
+		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+	</svg>
+	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
-					    </li><!--//nav-item--> 		
+					        <div id="submenu-5" class="collapse submenu submenu-5" data-parent="#menu-accordion">
+						        <ul class="submenu-list list-unstyled">
+									<li class="submenu-item"><a class="submenu-link" href="health_board_vaccinations.html">Vaccinations Across Health Board</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="vaccination_map.html">Vaccination Map</a></li>
+						        </ul>
+					        </div>
+						</li><!--//nav-item-->	 
 						<li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-4" aria-expanded="false" aria-controls="submenu-1">
@@ -240,177 +266,177 @@
       <td class="cell">Aneurin Bevan University Health Board</td>
       <td class="cell">Torfaen</td>
       <td class="cell">93961</td>
-      <td class="cell">4943</td>
-      <td class="cell">750</td>
-      <td class="cell">5379</td>
+      <td class="cell">4982</td>
+      <td class="cell">784</td>
+      <td class="cell">5550</td>
     </tr>
     <tr>
       <td class="cell">Aneurin Bevan University Health Board</td>
       <td class="cell">Monmouthshire</td>
       <td class="cell">94590</td>
-      <td class="cell">4943</td>
-      <td class="cell">750</td>
-      <td class="cell">3445</td>
+      <td class="cell">4982</td>
+      <td class="cell">784</td>
+      <td class="cell">3591</td>
     </tr>
     <tr>
       <td class="cell">Aneurin Bevan University Health Board</td>
       <td class="cell">Caerphilly</td>
       <td class="cell">181075</td>
-      <td class="cell">4943</td>
-      <td class="cell">750</td>
-      <td class="cell">11322</td>
+      <td class="cell">4982</td>
+      <td class="cell">784</td>
+      <td class="cell">11628</td>
     </tr>
     <tr>
       <td class="cell">Aneurin Bevan University Health Board</td>
       <td class="cell">Blaenau Gwent</td>
       <td class="cell">69862</td>
-      <td class="cell">4943</td>
-      <td class="cell">750</td>
-      <td class="cell">5489</td>
+      <td class="cell">4982</td>
+      <td class="cell">784</td>
+      <td class="cell">5585</td>
     </tr>
     <tr>
       <td class="cell">Aneurin Bevan University Health Board</td>
       <td class="cell">Newport</td>
       <td class="cell">154676</td>
-      <td class="cell">4943</td>
-      <td class="cell">750</td>
-      <td class="cell">9202</td>
+      <td class="cell">4982</td>
+      <td class="cell">784</td>
+      <td class="cell">9487</td>
     </tr>
     <tr>
       <td class="cell">Betsi Cadwaladr University Health Board</td>
       <td class="cell">Anglesey</td>
       <td class="cell">70043</td>
-      <td class="cell">4405</td>
-      <td class="cell">620</td>
-      <td class="cell">1344</td>
+      <td class="cell">4435</td>
+      <td class="cell">639</td>
+      <td class="cell">1405</td>
     </tr>
     <tr>
       <td class="cell">Betsi Cadwaladr University Health Board</td>
       <td class="cell">Flintshire</td>
       <td class="cell">156100</td>
-      <td class="cell">4405</td>
-      <td class="cell">620</td>
-      <td class="cell">6589</td>
+      <td class="cell">4435</td>
+      <td class="cell">639</td>
+      <td class="cell">7076</td>
     </tr>
     <tr>
       <td class="cell">Betsi Cadwaladr University Health Board</td>
       <td class="cell">Denbighshire</td>
       <td class="cell">95696</td>
-      <td class="cell">4405</td>
-      <td class="cell">620</td>
-      <td class="cell">3157</td>
+      <td class="cell">4435</td>
+      <td class="cell">639</td>
+      <td class="cell">3381</td>
     </tr>
     <tr>
       <td class="cell">Betsi Cadwaladr University Health Board</td>
       <td class="cell">Conwy</td>
       <td class="cell">117203</td>
-      <td class="cell">4405</td>
-      <td class="cell">620</td>
-      <td class="cell">2585</td>
+      <td class="cell">4435</td>
+      <td class="cell">639</td>
+      <td class="cell">2707</td>
     </tr>
     <tr>
       <td class="cell">Betsi Cadwaladr University Health Board</td>
       <td class="cell">Gwynedd</td>
       <td class="cell">124560</td>
-      <td class="cell">4405</td>
-      <td class="cell">620</td>
-      <td class="cell">1994</td>
+      <td class="cell">4435</td>
+      <td class="cell">639</td>
+      <td class="cell">2119</td>
     </tr>
     <tr>
       <td class="cell">Betsi Cadwaladr University Health Board</td>
       <td class="cell">Wrexham</td>
       <td class="cell">135957</td>
-      <td class="cell">4405</td>
-      <td class="cell">620</td>
-      <td class="cell">8278</td>
+      <td class="cell">4435</td>
+      <td class="cell">639</td>
+      <td class="cell">8964</td>
     </tr>
     <tr>
       <td class="cell">Cardiff and Vale University Health Board</td>
       <td class="cell">Cardiff</td>
       <td class="cell">366903</td>
-      <td class="cell">4819</td>
-      <td class="cell">534</td>
-      <td class="cell">21648</td>
+      <td class="cell">4846</td>
+      <td class="cell">557</td>
+      <td class="cell">22309</td>
     </tr>
     <tr>
       <td class="cell">Cardiff and Vale University Health Board</td>
       <td class="cell">The Vale of Glamorgan</td>
       <td class="cell">133587</td>
-      <td class="cell">4819</td>
-      <td class="cell">534</td>
-      <td class="cell">5969</td>
+      <td class="cell">4846</td>
+      <td class="cell">557</td>
+      <td class="cell">6226</td>
     </tr>
     <tr>
       <td class="cell">Cwm Taf Morgannwg University Health Board</td>
       <td class="cell">Bridgend</td>
       <td class="cell">147049</td>
-      <td class="cell">5072</td>
-      <td class="cell">1144</td>
-      <td class="cell">11054</td>
+      <td class="cell">5119</td>
+      <td class="cell">1208</td>
+      <td class="cell">11401</td>
     </tr>
     <tr>
       <td class="cell">Cwm Taf Morgannwg University Health Board</td>
       <td class="cell">Merthyr Tydfil</td>
       <td class="cell">60326</td>
-      <td class="cell">5072</td>
-      <td class="cell">1144</td>
-      <td class="cell">5883</td>
+      <td class="cell">5119</td>
+      <td class="cell">1208</td>
+      <td class="cell">6005</td>
     </tr>
     <tr>
       <td class="cell">Cwm Taf Morgannwg University Health Board</td>
       <td class="cell">Rhondda Cynon Taf</td>
       <td class="cell">241264</td>
-      <td class="cell">5072</td>
-      <td class="cell">1144</td>
-      <td class="cell">18882</td>
+      <td class="cell">5119</td>
+      <td class="cell">1208</td>
+      <td class="cell">19323</td>
     </tr>
     <tr>
       <td class="cell">Hywel Dda University Health Board</td>
       <td class="cell">Carmarthenshire</td>
       <td class="cell">188771</td>
-      <td class="cell">2908</td>
-      <td class="cell">284</td>
-      <td class="cell">8630</td>
+      <td class="cell">2911</td>
+      <td class="cell">300</td>
+      <td class="cell">9012</td>
     </tr>
     <tr>
       <td class="cell">Hywel Dda University Health Board</td>
       <td class="cell">Ceredigion</td>
       <td class="cell">72695</td>
-      <td class="cell">2908</td>
-      <td class="cell">284</td>
-      <td class="cell">1411</td>
+      <td class="cell">2911</td>
+      <td class="cell">300</td>
+      <td class="cell">1491</td>
     </tr>
     <tr>
       <td class="cell">Hywel Dda University Health Board</td>
       <td class="cell">Pembrokeshire</td>
       <td class="cell">125818</td>
-      <td class="cell">2908</td>
-      <td class="cell">284</td>
-      <td class="cell">2554</td>
+      <td class="cell">2911</td>
+      <td class="cell">300</td>
+      <td class="cell">2684</td>
     </tr>
     <tr>
       <td class="cell">Powys Teaching Health Board</td>
       <td class="cell">Powys</td>
       <td class="cell">132435</td>
-      <td class="cell">11</td>
-      <td class="cell">37</td>
-      <td class="cell">2878</td>
+      <td class="cell">10</td>
+      <td class="cell">40</td>
+      <td class="cell">3018</td>
     </tr>
     <tr>
       <td class="cell">Swansea Bay University Health Board</td>
       <td class="cell">Neath Port Talbot</td>
       <td class="cell">143315</td>
-      <td class="cell">2387</td>
-      <td class="cell">606</td>
-      <td class="cell">10026</td>
+      <td class="cell">2390</td>
+      <td class="cell">637</td>
+      <td class="cell">10236</td>
     </tr>
     <tr>
       <td class="cell">Swansea Bay University Health Board</td>
       <td class="cell">Swansea</td>
       <td class="cell">246993</td>
-      <td class="cell">2387</td>
-      <td class="cell">606</td>
-      <td class="cell">15129</td>
+      <td class="cell">2390</td>
+      <td class="cell">637</td>
+      <td class="cell">15483</td>
     </tr>
   </tbody>
 														
@@ -470,11 +496,7 @@
 }
 	</script>
 
-	<script>
-		$(document).ready(function () {
-		$('#dtBasicExample').DataTable({iDisplayLength: -1});
-	  });
-	</script>
+
 
 	<!-- Charts JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
