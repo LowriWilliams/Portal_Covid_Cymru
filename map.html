@@ -26,26 +26,14 @@
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 		
-	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.dataTables.min.css">
-    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" language="javascript" src="https://cdn.rawgit.com/ashl1/datatables-rowsgroup/fbd569b8768155c7a9a62568e66a64115887d7d0/dataTables.rowsGroup.js"></script>
-
-	<script type="text/javascript" class="init">
-	$(document).ready(function() {
-        var table = $('#dtBasicExample').DataTable({
-        'rowsGroup': [0],
-        iDisplayLength: -1
-        });   
-    });
-    </script>
+	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+   	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+   	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
 
 	<style>
-		.dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
-    	.dataTables_filter {text-align: left !important;float: left !important;}
-    	table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {background : none;}
+	.dataTables_info, .dataTables_length, .dataTables_paginate { display: none; }
+    .dataTables_filter {text-align: left !important;float: left !important;}
 	</style>	
 </head> 
 
@@ -3204,7 +3192,11 @@
    theIframe.src = theUrl;
 }
 	</script>
-
+		<script>
+		$(document).ready(function () {
+		$('#dtBasicExample').DataTable({iDisplayLength: -1});
+	  });
+	</script>
 	
 </body>
 </html> 
