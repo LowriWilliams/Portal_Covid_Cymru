@@ -227,7 +227,7 @@
 							<div class="app-card-header p-3">
 								<div class="row justify-content-between align-items-center">
 									<div class="col-auto">
-										<h4 class="app-card-title">Daily Cases, Deaths, and Tests in Wales</h4>
+										<h4 class="app-card-title">Daily Cases, Deaths, Tests, and Vaccinations in Wales</h4>
 									</div><!--//col-->
 								</div><!--//row-->
 							</div>
@@ -305,7 +305,12 @@
         var year_average_tests = false;
         var month_average_tests = false;
         var week_average_tests = false;
-
+		var year_vaccinations = false;
+		var year_average_vaccinations = false;
+		var month_vaccinations = false;
+		var month_average_vaccinations = false;
+		var week_vaccinations = false;
+		var week_average_vaccinations = false;
 	</script>
 	<script src="assets/js/daily_graph.js"></script> 
 
@@ -365,7 +370,7 @@
         {
 		label: '7 Day Moving Average Cases',
 		data: year_average_cases,
-		borderColor:  "grey",
+		borderColor:  "#3e95cd",
         borderDash: [10,5],
 		fill: false,
         hidden: true
@@ -379,7 +384,7 @@
         {
 		label: '7 Day Moving Average Deaths',
 		data: year_average_deaths,
-		borderColor: "grey",
+		borderColor: "#cd3e4e",
 		fill: false,
         hidden: true
 		},
@@ -392,14 +397,29 @@
         {
 		label: '7 Day Moving Average Tests',
 		data: year_average_tests,
-		borderColor:  "grey",
+		borderColor:  "#ffd500",
         borderDash: [10,10],
 		fill: false,
         hidden: true
-		}
+		},
+		{
+		label: 'Daily Vaccinations 1st Dose',
+		data: year_vaccinations,
+		borderColor: "#3ecd76",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations 1st Dose',
+		data: year_average_vaccinations,
+		borderColor:  "#3ecd76",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		},
         ]
 	},
 	options: {
+		spanGaps: false,
 		maintainAspectRatio: false,
 		responsive:true,
 		scales: {
@@ -462,10 +482,25 @@
         borderDash: [10,10],
 		fill: false,
         hidden: true
-		}
+		},
+		{
+		label: 'Daily Vaccinations 1st Dose',
+		data: month_vaccinations,
+		borderColor: "#3ecd76",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations 1st Dose',
+		data: month_average_vaccinations,
+		borderColor:  "#3ecd76",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		},
         ]
 	},
 	options: {
+		spanGaps: false,
 		maintainAspectRatio: false,
 		responsive:true,
 		scales: {
@@ -528,10 +563,25 @@
         borderDash: [10,10],
 		fill: false,
         hidden: true
-		}
+		},
+		{
+		label: 'Daily Vaccinations 1st Dose',
+		data: week_vaccinations,
+		borderColor: "#3ecd76",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations 1st Dose',
+		data: week_average_vaccinations,
+		borderColor:  "#3ecd76",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		},
         ]
 	},
 	options: {
+		spanGaps: false,
 		maintainAspectRatio: false,
 		responsive:true,
 		scales: {
