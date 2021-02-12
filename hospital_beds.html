@@ -91,11 +91,23 @@
 		                        <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-home"></i>&nbsp;&nbsp;Home</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
-					    <li class="nav-item">
+					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="map.html">
-		                         <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;Map</span>
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-6" aria-expanded="false" aria-controls="submenu-6">
+								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-map-marked-alt"></i></i>&nbsp;&nbsp;Maps</span>
+
+		                         <span class="submenu-arrow">
+		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+	</svg>
+	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
+					        <div id="submenu-6" class="collapse submenu submenu-6" data-parent="#menu-accordion">
+						        <ul class="submenu-list list-unstyled">
+							       	<li class="submenu-item"><a class="submenu-link" href="map.html">Daily Map</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="least_map.html">Last 10 Days Map</a></li>
+						        </ul>
+					        </div>
 					    </li><!--//nav-item-->
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->

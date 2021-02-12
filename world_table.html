@@ -93,11 +93,23 @@
 		                        <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-home"></i>&nbsp;&nbsp;Home</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
-					    <li class="nav-item">
+					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="map.html">
-		                         <span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;Map</span>
+					        <a class="nav-link submenu-toggle" href="#" data-toggle="collapse" data-target="#submenu-6" aria-expanded="false" aria-controls="submenu-6">
+								<span class="nav-link-text" style='font-size:12pt;'><i class="fas fa-map-marked-alt"></i></i>&nbsp;&nbsp;Maps</span>
+
+		                         <span class="submenu-arrow">
+		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+	</svg>
+	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
+					        <div id="submenu-6" class="collapse submenu submenu-6" data-parent="#menu-accordion">
+						        <ul class="submenu-list list-unstyled">
+							       	<li class="submenu-item"><a class="submenu-link" href="map.html">Daily Map</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="least_map.html">Last 10 Days Map</a></li>
+						        </ul>
+					        </div>
 					    </li><!--//nav-item-->
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -270,20 +282,20 @@
     <tr>
       <td class="cell">1</td>
       <td class="cell">USA</td>
-      <td class="cell">28002240</td>
-      <td class="cell">NaN</td>
-      <td class="cell">486922</td>
-      <td class="cell">NaN</td>
-      <td class="cell">330318833</td>
+      <td class="cell">28063787</td>
+      <td class="cell">59445</td>
+      <td class="cell">491140</td>
+      <td class="cell">1569</td>
+      <td class="cell">331482484</td>
       <td class="cell">332198570</td>
     </tr>
     <tr>
       <td class="cell">2</td>
       <td class="cell">India</td>
-      <td class="cell">10880603</td>
-      <td class="cell">190</td>
-      <td class="cell">155484</td>
-      <td class="cell">NaN</td>
+      <td class="cell">10892550</td>
+      <td class="cell">12137</td>
+      <td class="cell">155588</td>
+      <td class="cell">104</td>
       <td class="cell">204789784</td>
       <td class="cell">1388345614</td>
     </tr>
@@ -310,11 +322,11 @@
     <tr>
       <td class="cell">5</td>
       <td class="cell">UK</td>
-      <td class="cell">3998655</td>
-      <td class="cell">NaN</td>
-      <td class="cell">115529</td>
-      <td class="cell">NaN</td>
-      <td class="cell">80267452</td>
+      <td class="cell">4013799</td>
+      <td class="cell">15144</td>
+      <td class="cell">116287</td>
+      <td class="cell">758</td>
+      <td class="cell">81044007</td>
       <td class="cell">68105802</td>
     </tr>
     <tr>
@@ -330,40 +342,40 @@
     <tr>
       <td class="cell">7</td>
       <td class="cell">Spain</td>
-      <td class="cell">3041454</td>
-      <td class="cell">NaN</td>
-      <td class="cell">64217</td>
-      <td class="cell">NaN</td>
+      <td class="cell">3056035</td>
+      <td class="cell">14581</td>
+      <td class="cell">64747</td>
+      <td class="cell">530</td>
       <td class="cell">35782465</td>
       <td class="cell">46765968</td>
     </tr>
     <tr>
       <td class="cell">8</td>
       <td class="cell">Italy</td>
-      <td class="cell">2683403</td>
-      <td class="cell">NaN</td>
-      <td class="cell">92729</td>
-      <td class="cell">NaN</td>
-      <td class="cell">35384786</td>
+      <td class="cell">2697296</td>
+      <td class="cell">13908</td>
+      <td class="cell">93045</td>
+      <td class="cell">316</td>
+      <td class="cell">35690405</td>
       <td class="cell">60406838</td>
     </tr>
     <tr>
       <td class="cell">9</td>
       <td class="cell">Turkey</td>
-      <td class="cell">2564427</td>
-      <td class="cell">NaN</td>
-      <td class="cell">27187</td>
-      <td class="cell">NaN</td>
-      <td class="cell">31159676</td>
+      <td class="cell">2572190</td>
+      <td class="cell">7763</td>
+      <td class="cell">27284</td>
+      <td class="cell">97</td>
+      <td class="cell">31289306</td>
       <td class="cell">84896711</td>
     </tr>
     <tr>
       <td class="cell">10</td>
       <td class="cell">Germany</td>
-      <td class="cell">2321215</td>
-      <td class="cell">NaN</td>
-      <td class="cell">64513</td>
-      <td class="cell">NaN</td>
+      <td class="cell">2329979</td>
+      <td class="cell">8764</td>
+      <td class="cell">65036</td>
+      <td class="cell">523</td>
       <td class="cell">41758675</td>
       <td class="cell">83949242</td>
     </tr>
@@ -420,11 +432,11 @@
     <tr>
       <td class="cell">16</td>
       <td class="cell">South Africa</td>
-      <td class="cell">1484900</td>
-      <td class="cell">NaN</td>
-      <td class="cell">47382</td>
-      <td class="cell">NaN</td>
-      <td class="cell">8605729</td>
+      <td class="cell">1487681</td>
+      <td class="cell">2781</td>
+      <td class="cell">47670</td>
+      <td class="cell">288</td>
+      <td class="cell">8641447</td>
       <td class="cell">59767678</td>
     </tr>
     <tr>
@@ -470,41 +482,41 @@
     <tr>
       <td class="cell">21</td>
       <td class="cell">Netherlands</td>
-      <td class="cell">1017302</td>
-      <td class="cell">NaN</td>
-      <td class="cell">14662</td>
-      <td class="cell">NaN</td>
+      <td class="cell">1021643</td>
+      <td class="cell">4341</td>
+      <td class="cell">14727</td>
+      <td class="cell">65</td>
       <td class="cell">6970400</td>
       <td class="cell">17158277</td>
     </tr>
     <tr>
       <td class="cell">22</td>
       <td class="cell">Canada</td>
-      <td class="cell">817163</td>
-      <td class="cell">NaN</td>
-      <td class="cell">21088</td>
-      <td class="cell">NaN</td>
+      <td class="cell">819278</td>
+      <td class="cell">2115</td>
+      <td class="cell">21130</td>
+      <td class="cell">42</td>
       <td class="cell">22720596</td>
       <td class="cell">37945719</td>
     </tr>
     <tr>
       <td class="cell">23</td>
       <td class="cell">Portugal</td>
-      <td class="cell">778369</td>
-      <td class="cell">NaN</td>
-      <td class="cell">14885</td>
-      <td class="cell">NaN</td>
+      <td class="cell">781223</td>
+      <td class="cell">2854</td>
+      <td class="cell">15034</td>
+      <td class="cell">149</td>
       <td class="cell">7731314</td>
       <td class="cell">10178307</td>
     </tr>
     <tr>
       <td class="cell">24</td>
       <td class="cell">Chile</td>
-      <td class="cell">764307</td>
-      <td class="cell">NaN</td>
-      <td class="cell">19262</td>
-      <td class="cell">NaN</td>
-      <td class="cell">8559790</td>
+      <td class="cell">768471</td>
+      <td class="cell">4164</td>
+      <td class="cell">19345</td>
+      <td class="cell">83</td>
+      <td class="cell">8615052</td>
       <td class="cell">19217153</td>
     </tr>
     <tr>
@@ -530,30 +542,30 @@
     <tr>
       <td class="cell">27</td>
       <td class="cell">Israel</td>
-      <td class="cell">716643</td>
-      <td class="cell">1831</td>
-      <td class="cell">5286</td>
-      <td class="cell">3</td>
+      <td class="cell">718746</td>
+      <td class="cell">3934</td>
+      <td class="cell">5304</td>
+      <td class="cell">21</td>
       <td class="cell">11358022</td>
       <td class="cell">9197590</td>
     </tr>
     <tr>
       <td class="cell">28</td>
       <td class="cell">Iraq</td>
-      <td class="cell">636908</td>
-      <td class="cell">NaN</td>
-      <td class="cell">13144</td>
-      <td class="cell">NaN</td>
-      <td class="cell">6108475</td>
+      <td class="cell">639438</td>
+      <td class="cell">2530</td>
+      <td class="cell">13157</td>
+      <td class="cell">13</td>
+      <td class="cell">6151665</td>
       <td class="cell">40773246</td>
     </tr>
     <tr>
       <td class="cell">29</td>
       <td class="cell">Sweden</td>
-      <td class="cell">604577</td>
+      <td class="cell">608411</td>
       <td class="cell">NaN</td>
-      <td class="cell">12370</td>
-      <td class="cell">NaN</td>
+      <td class="cell">12428</td>
+      <td class="cell">35</td>
       <td class="cell">5510486</td>
       <td class="cell">10138058</td>
     </tr>
@@ -574,11 +586,21 @@
       <td class="cell">2022</td>
       <td class="cell">11495</td>
       <td class="cell">26</td>
-      <td class="cell">8210357</td>
+      <td class="cell">8246989</td>
       <td class="cell">110475954</td>
     </tr>
     <tr>
       <td class="cell">32</td>
+      <td class="cell">Switzerland</td>
+      <td class="cell">540727</td>
+      <td class="cell">1253</td>
+      <td class="cell">9747</td>
+      <td class="cell">18</td>
+      <td class="cell">4674340</td>
+      <td class="cell">8693588</td>
+    </tr>
+    <tr>
+      <td class="cell">33</td>
       <td class="cell">Bangladesh</td>
       <td class="cell">539975</td>
       <td class="cell">404</td>
@@ -588,53 +610,43 @@
       <td class="cell">165698028</td>
     </tr>
     <tr>
-      <td class="cell">33</td>
-      <td class="cell">Switzerland</td>
-      <td class="cell">539474</td>
-      <td class="cell">NaN</td>
-      <td class="cell">9729</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4641323</td>
-      <td class="cell">8693588</td>
-    </tr>
-    <tr>
       <td class="cell">34</td>
       <td class="cell">Morocco</td>
-      <td class="cell">477160</td>
-      <td class="cell">NaN</td>
-      <td class="cell">8440</td>
-      <td class="cell">NaN</td>
-      <td class="cell">5493128</td>
+      <td class="cell">477656</td>
+      <td class="cell">496</td>
+      <td class="cell">8450</td>
+      <td class="cell">10</td>
+      <td class="cell">5504749</td>
       <td class="cell">37179216</td>
     </tr>
     <tr>
       <td class="cell">35</td>
       <td class="cell">Austria</td>
-      <td class="cell">429139</td>
-      <td class="cell">NaN</td>
-      <td class="cell">8138</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4739747</td>
+      <td class="cell">430870</td>
+      <td class="cell">1731</td>
+      <td class="cell">8170</td>
+      <td class="cell">32</td>
+      <td class="cell">4786728</td>
       <td class="cell">9038063</td>
     </tr>
     <tr>
       <td class="cell">36</td>
       <td class="cell">Serbia</td>
-      <td class="cell">415943</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4183</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2742087</td>
+      <td class="cell">417871</td>
+      <td class="cell">1928</td>
+      <td class="cell">4199</td>
+      <td class="cell">16</td>
+      <td class="cell">2753786</td>
       <td class="cell">8715576</td>
     </tr>
     <tr>
       <td class="cell">37</td>
       <td class="cell">Japan</td>
-      <td class="cell">410012</td>
-      <td class="cell">NaN</td>
-      <td class="cell">6678</td>
-      <td class="cell">NaN</td>
-      <td class="cell">7447270</td>
+      <td class="cell">411751</td>
+      <td class="cell">1739</td>
+      <td class="cell">6774</td>
+      <td class="cell">96</td>
+      <td class="cell">7481377</td>
       <td class="cell">126236803</td>
     </tr>
     <tr>
@@ -650,15 +662,25 @@
     <tr>
       <td class="cell">39</td>
       <td class="cell">Saudi Arabia</td>
-      <td class="cell">371720</td>
-      <td class="cell">NaN</td>
-      <td class="cell">6420</td>
-      <td class="cell">NaN</td>
-      <td class="cell">12847483</td>
+      <td class="cell">372073</td>
+      <td class="cell">353</td>
+      <td class="cell">6424</td>
+      <td class="cell">4</td>
+      <td class="cell">12899937</td>
       <td class="cell">35146084</td>
     </tr>
     <tr>
       <td class="cell">40</td>
+      <td class="cell">Jordan</td>
+      <td class="cell">343563</td>
+      <td class="cell">1579</td>
+      <td class="cell">4433</td>
+      <td class="cell">12</td>
+      <td class="cell">4159350</td>
+      <td class="cell">10265403</td>
+    </tr>
+    <tr>
+      <td class="cell">41</td>
       <td class="cell">UAE</td>
       <td class="cell">342974</td>
       <td class="cell">3307</td>
@@ -668,23 +690,13 @@
       <td class="cell">9963773</td>
     </tr>
     <tr>
-      <td class="cell">41</td>
-      <td class="cell">Jordan</td>
-      <td class="cell">341984</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4421</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4134849</td>
-      <td class="cell">10265403</td>
-    </tr>
-    <tr>
       <td class="cell">42</td>
       <td class="cell">Lebanon</td>
-      <td class="cell">331159</td>
-      <td class="cell">NaN</td>
-      <td class="cell">3866</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2758601</td>
+      <td class="cell">334093</td>
+      <td class="cell">2934</td>
+      <td class="cell">3915</td>
+      <td class="cell">49</td>
+      <td class="cell">2777796</td>
       <td class="cell">6806512</td>
     </tr>
     <tr>
@@ -800,11 +812,11 @@
     <tr>
       <td class="cell">54</td>
       <td class="cell">Dominican Republic</td>
-      <td class="cell">226714</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2904</td>
-      <td class="cell">NaN</td>
-      <td class="cell">1121386</td>
+      <td class="cell">227764</td>
+      <td class="cell">1050</td>
+      <td class="cell">2917</td>
+      <td class="cell">13</td>
+      <td class="cell">1127561</td>
       <td class="cell">10914781</td>
     </tr>
     <tr>
@@ -820,21 +832,21 @@
     <tr>
       <td class="cell">56</td>
       <td class="cell">Ireland</td>
-      <td class="cell">206801</td>
-      <td class="cell">NaN</td>
-      <td class="cell">3846</td>
-      <td class="cell">NaN</td>
-      <td class="cell">3269078</td>
+      <td class="cell">207720</td>
+      <td class="cell">919</td>
+      <td class="cell">3865</td>
+      <td class="cell">19</td>
+      <td class="cell">3288084</td>
       <td class="cell">4971670</td>
     </tr>
     <tr>
       <td class="cell">57</td>
       <td class="cell">Denmark</td>
-      <td class="cell">203365</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2269</td>
-      <td class="cell">NaN</td>
-      <td class="cell">14796936</td>
+      <td class="cell">203793</td>
+      <td class="cell">428</td>
+      <td class="cell">2280</td>
+      <td class="cell">11</td>
+      <td class="cell">14925205</td>
       <td class="cell">5804785</td>
     </tr>
     <tr>
@@ -890,11 +902,11 @@
     <tr>
       <td class="cell">63</td>
       <td class="cell">Kuwait</td>
-      <td class="cell">175031</td>
-      <td class="cell">NaN</td>
-      <td class="cell">985</td>
-      <td class="cell">NaN</td>
-      <td class="cell">1640047</td>
+      <td class="cell">176052</td>
+      <td class="cell">1021</td>
+      <td class="cell">992</td>
+      <td class="cell">7</td>
+      <td class="cell">1651287</td>
       <td class="cell">4309288</td>
     </tr>
     <tr>
@@ -910,11 +922,11 @@
     <tr>
       <td class="cell">65</td>
       <td class="cell">Greece</td>
-      <td class="cell">168872</td>
-      <td class="cell">NaN</td>
-      <td class="cell">6056</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4602806</td>
+      <td class="cell">170244</td>
+      <td class="cell">1372</td>
+      <td class="cell">6077</td>
+      <td class="cell">21</td>
+      <td class="cell">4648406</td>
       <td class="cell">10391512</td>
     </tr>
     <tr>
@@ -930,15 +942,25 @@
     <tr>
       <td class="cell">67</td>
       <td class="cell">Moldova</td>
-      <td class="cell">167546</td>
-      <td class="cell">NaN</td>
-      <td class="cell">3607</td>
-      <td class="cell">NaN</td>
-      <td class="cell">658607</td>
+      <td class="cell">168826</td>
+      <td class="cell">1280</td>
+      <td class="cell">3626</td>
+      <td class="cell">19</td>
+      <td class="cell">662707</td>
       <td class="cell">4028162</td>
     </tr>
     <tr>
       <td class="cell">68</td>
+      <td class="cell">Guatemala</td>
+      <td class="cell">166283</td>
+      <td class="cell">751</td>
+      <td class="cell">6057</td>
+      <td class="cell">34</td>
+      <td class="cell">845614</td>
+      <td class="cell">18118278</td>
+    </tr>
+    <tr>
+      <td class="cell">69</td>
       <td class="cell">Palestine</td>
       <td class="cell">166200</td>
       <td class="cell">665</td>
@@ -946,16 +968,6 @@
       <td class="cell">8</td>
       <td class="cell">1071752</td>
       <td class="cell">5173740</td>
-    </tr>
-    <tr>
-      <td class="cell">69</td>
-      <td class="cell">Guatemala</td>
-      <td class="cell">165532</td>
-      <td class="cell">NaN</td>
-      <td class="cell">6023</td>
-      <td class="cell">NaN</td>
-      <td class="cell">839269</td>
-      <td class="cell">18118278</td>
     </tr>
     <tr>
       <td class="cell">70</td>
@@ -980,11 +992,11 @@
     <tr>
       <td class="cell">72</td>
       <td class="cell">Ethiopia</td>
-      <td class="cell">144862</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2171</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2026734</td>
+      <td class="cell">145548</td>
+      <td class="cell">686</td>
+      <td class="cell">2177</td>
+      <td class="cell">6</td>
+      <td class="cell">2033790</td>
       <td class="cell">116698689</td>
     </tr>
     <tr>
@@ -1010,11 +1022,11 @@
     <tr>
       <td class="cell">75</td>
       <td class="cell">Myanmar</td>
-      <td class="cell">141522</td>
-      <td class="cell">NaN</td>
-      <td class="cell">3184</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2471972</td>
+      <td class="cell">141543</td>
+      <td class="cell">21</td>
+      <td class="cell">3188</td>
+      <td class="cell">4</td>
+      <td class="cell">2473356</td>
       <td class="cell">54634436</td>
     </tr>
     <tr>
@@ -1050,11 +1062,11 @@
     <tr>
       <td class="cell">79</td>
       <td class="cell">Bosnia and Herzegovina</td>
-      <td class="cell">125123</td>
-      <td class="cell">NaN</td>
-      <td class="cell">4868</td>
-      <td class="cell">NaN</td>
-      <td class="cell">623347</td>
+      <td class="cell">125402</td>
+      <td class="cell">279</td>
+      <td class="cell">4881</td>
+      <td class="cell">13</td>
+      <td class="cell">625798</td>
       <td class="cell">3268168</td>
     </tr>
     <tr>
@@ -1080,31 +1092,31 @@
     <tr>
       <td class="cell">82</td>
       <td class="cell">Kenya</td>
-      <td class="cell">102353</td>
-      <td class="cell">NaN</td>
+      <td class="cell">102613</td>
+      <td class="cell">260</td>
       <td class="cell">1794</td>
       <td class="cell">NaN</td>
-      <td class="cell">1228047</td>
+      <td class="cell">1233920</td>
       <td class="cell">54494209</td>
     </tr>
     <tr>
       <td class="cell">83</td>
       <td class="cell">North Macedonia</td>
-      <td class="cell">96152</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2966</td>
-      <td class="cell">NaN</td>
-      <td class="cell">479430</td>
+      <td class="cell">96518</td>
+      <td class="cell">366</td>
+      <td class="cell">2971</td>
+      <td class="cell">5</td>
+      <td class="cell">482026</td>
       <td class="cell">2083321</td>
     </tr>
     <tr>
       <td class="cell">84</td>
       <td class="cell">Albania</td>
-      <td class="cell">89776</td>
-      <td class="cell">NaN</td>
-      <td class="cell">1517</td>
-      <td class="cell">NaN</td>
-      <td class="cell">393926</td>
+      <td class="cell">90835</td>
+      <td class="cell">1059</td>
+      <td class="cell">1531</td>
+      <td class="cell">14</td>
+      <td class="cell">402000</td>
       <td class="cell">2875854</td>
     </tr>
     <tr>
@@ -1149,6 +1161,16 @@
     </tr>
     <tr>
       <td class="cell">89</td>
+      <td class="cell">Sri Lanka</td>
+      <td class="cell">74056</td>
+      <td class="cell">940</td>
+      <td class="cell">384</td>
+      <td class="cell">5</td>
+      <td class="cell">1831420</td>
+      <td class="cell">21468618</td>
+    </tr>
+    <tr>
+      <td class="cell">90</td>
       <td class="cell">Ghana</td>
       <td class="cell">73557</td>
       <td class="cell">NaN</td>
@@ -1158,17 +1180,17 @@
       <td class="cell">31469100</td>
     </tr>
     <tr>
-      <td class="cell">90</td>
-      <td class="cell">Sri Lanka</td>
-      <td class="cell">73116</td>
-      <td class="cell">NaN</td>
-      <td class="cell">379</td>
-      <td class="cell">NaN</td>
-      <td class="cell">1831420</td>
-      <td class="cell">21468618</td>
+      <td class="cell">91</td>
+      <td class="cell">Montenegro</td>
+      <td class="cell">68004</td>
+      <td class="cell">563</td>
+      <td class="cell">880</td>
+      <td class="cell">11</td>
+      <td class="cell">251153</td>
+      <td class="cell">628115</td>
     </tr>
     <tr>
-      <td class="cell">91</td>
+      <td class="cell">92</td>
       <td class="cell">Zambia</td>
       <td class="cell">67681</td>
       <td class="cell">1083</td>
@@ -1178,20 +1200,10 @@
       <td class="cell">18697026</td>
     </tr>
     <tr>
-      <td class="cell">92</td>
-      <td class="cell">Montenegro</td>
-      <td class="cell">67441</td>
-      <td class="cell">NaN</td>
-      <td class="cell">869</td>
-      <td class="cell">NaN</td>
-      <td class="cell">249215</td>
-      <td class="cell">628115</td>
-    </tr>
-    <tr>
       <td class="cell">93</td>
       <td class="cell">Norway</td>
-      <td class="cell">65811</td>
-      <td class="cell">NaN</td>
+      <td class="cell">66070</td>
+      <td class="cell">259</td>
       <td class="cell">592</td>
       <td class="cell">NaN</td>
       <td class="cell">3562573</td>
@@ -1252,19 +1264,19 @@
       <td class="cell">Finland</td>
       <td class="cell">49572</td>
       <td class="cell">407</td>
-      <td class="cell">708</td>
-      <td class="cell">NaN</td>
+      <td class="cell">710</td>
+      <td class="cell">2</td>
       <td class="cell">3038900</td>
       <td class="cell">5546035</td>
     </tr>
     <tr>
       <td class="cell">100</td>
       <td class="cell">Mozambique</td>
-      <td class="cell">47790</td>
-      <td class="cell">NaN</td>
-      <td class="cell">501</td>
-      <td class="cell">NaN</td>
-      <td class="cell">374520</td>
+      <td class="cell">48588</td>
+      <td class="cell">798</td>
+      <td class="cell">514</td>
+      <td class="cell">13</td>
+      <td class="cell">377127</td>
       <td class="cell">31787903</td>
     </tr>
     <tr>
@@ -1280,40 +1292,40 @@
     <tr>
       <td class="cell">102</td>
       <td class="cell">Uganda</td>
-      <td class="cell">39942</td>
-      <td class="cell">NaN</td>
+      <td class="cell">39979</td>
+      <td class="cell">37</td>
       <td class="cell">328</td>
       <td class="cell">NaN</td>
-      <td class="cell">850130</td>
+      <td class="cell">852444</td>
       <td class="cell">46617407</td>
     </tr>
     <tr>
       <td class="cell">103</td>
       <td class="cell">Cuba</td>
-      <td class="cell">35772</td>
-      <td class="cell">NaN</td>
-      <td class="cell">253</td>
-      <td class="cell">NaN</td>
-      <td class="cell">2088032</td>
+      <td class="cell">36595</td>
+      <td class="cell">823</td>
+      <td class="cell">257</td>
+      <td class="cell">4</td>
+      <td class="cell">2106593</td>
       <td class="cell">11322342</td>
     </tr>
     <tr>
       <td class="cell">104</td>
       <td class="cell">Namibia</td>
-      <td class="cell">35353</td>
-      <td class="cell">NaN</td>
-      <td class="cell">382</td>
-      <td class="cell">NaN</td>
-      <td class="cell">279129</td>
+      <td class="cell">35554</td>
+      <td class="cell">201</td>
+      <td class="cell">384</td>
+      <td class="cell">2</td>
+      <td class="cell">280713</td>
       <td class="cell">2569058</td>
     </tr>
     <tr>
       <td class="cell">105</td>
       <td class="cell">Zimbabwe</td>
-      <td class="cell">34864</td>
-      <td class="cell">NaN</td>
-      <td class="cell">1364</td>
-      <td class="cell">NaN</td>
+      <td class="cell">35045</td>
+      <td class="cell">96</td>
+      <td class="cell">1393</td>
+      <td class="cell">11</td>
       <td class="cell">309283</td>
       <td class="cell">14995578</td>
     </tr>
@@ -1340,11 +1352,11 @@
     <tr>
       <td class="cell">108</td>
       <td class="cell">Ivory Coast</td>
-      <td class="cell">30526</td>
-      <td class="cell">NaN</td>
-      <td class="cell">171</td>
-      <td class="cell">NaN</td>
-      <td class="cell">375487</td>
+      <td class="cell">30717</td>
+      <td class="cell">191</td>
+      <td class="cell">173</td>
+      <td class="cell">2</td>
+      <td class="cell">378905</td>
       <td class="cell">26776276</td>
     </tr>
     <tr>
@@ -1370,11 +1382,11 @@
     <tr>
       <td class="cell">111</td>
       <td class="cell">Malawi</td>
-      <td class="cell">28270</td>
-      <td class="cell">NaN</td>
-      <td class="cell">914</td>
-      <td class="cell">NaN</td>
-      <td class="cell">166746</td>
+      <td class="cell">28630</td>
+      <td class="cell">360</td>
+      <td class="cell">926</td>
+      <td class="cell">12</td>
+      <td class="cell">168776</td>
       <td class="cell">19430946</td>
     </tr>
     <tr>
@@ -1449,6 +1461,16 @@
     </tr>
     <tr>
       <td class="cell">119</td>
+      <td class="cell">Jamaica</td>
+      <td class="cell">18527</td>
+      <td class="cell">290</td>
+      <td class="cell">368</td>
+      <td class="cell">5</td>
+      <td class="cell">182670</td>
+      <td class="cell">2969137</td>
+    </tr>
+    <tr>
+      <td class="cell">120</td>
       <td class="cell">French Polynesia</td>
       <td class="cell">18257</td>
       <td class="cell">NaN</td>
@@ -1456,16 +1478,6 @@
       <td class="cell">NaN</td>
       <td class="cell">26355</td>
       <td class="cell">281909</td>
-    </tr>
-    <tr>
-      <td class="cell">120</td>
-      <td class="cell">Jamaica</td>
-      <td class="cell">18237</td>
-      <td class="cell">NaN</td>
-      <td class="cell">363</td>
-      <td class="cell">NaN</td>
-      <td class="cell">181173</td>
-      <td class="cell">2969137</td>
     </tr>
     <tr>
       <td class="cell">121</td>
@@ -1540,10 +1552,10 @@
     <tr>
       <td class="cell">128</td>
       <td class="cell">Cabo Verde</td>
-      <td class="cell">14601</td>
-      <td class="cell">NaN</td>
-      <td class="cell">138</td>
-      <td class="cell">NaN</td>
+      <td class="cell">14647</td>
+      <td class="cell">46</td>
+      <td class="cell">139</td>
+      <td class="cell">1</td>
       <td class="cell">113493</td>
       <td class="cell">559697</td>
     </tr>
@@ -1600,10 +1612,10 @@
     <tr>
       <td class="cell">134</td>
       <td class="cell">Burkina Faso</td>
-      <td class="cell">11426</td>
-      <td class="cell">NaN</td>
-      <td class="cell">134</td>
-      <td class="cell">NaN</td>
+      <td class="cell">11475</td>
+      <td class="cell">49</td>
+      <td class="cell">136</td>
+      <td class="cell">2</td>
       <td class="cell">NaN</td>
       <td class="cell">21251940</td>
     </tr>
@@ -1690,8 +1702,8 @@
     <tr>
       <td class="cell">143</td>
       <td class="cell">Mali</td>
-      <td class="cell">8218</td>
-      <td class="cell">NaN</td>
+      <td class="cell">8222</td>
+      <td class="cell">4</td>
       <td class="cell">340</td>
       <td class="cell">NaN</td>
       <td class="cell">145929</td>
@@ -1720,11 +1732,11 @@
     <tr>
       <td class="cell">146</td>
       <td class="cell">Aruba</td>
-      <td class="cell">7338</td>
-      <td class="cell">NaN</td>
+      <td class="cell">7368</td>
+      <td class="cell">30</td>
       <td class="cell">68</td>
       <td class="cell">NaN</td>
-      <td class="cell">92611</td>
+      <td class="cell">93566</td>
       <td class="cell">107046</td>
     </tr>
     <tr>
@@ -1830,11 +1842,11 @@
     <tr>
       <td class="cell">157</td>
       <td class="cell">Curaçao</td>
-      <td class="cell">4633</td>
-      <td class="cell">NaN</td>
+      <td class="cell">4643</td>
+      <td class="cell">10</td>
       <td class="cell">22</td>
       <td class="cell">NaN</td>
-      <td class="cell">46326</td>
+      <td class="cell">46639</td>
       <td class="cell">164507</td>
     </tr>
     <tr>
@@ -1860,11 +1872,11 @@
     <tr>
       <td class="cell">160</td>
       <td class="cell">Gibraltar</td>
-      <td class="cell">4203</td>
-      <td class="cell">NaN</td>
-      <td class="cell">83</td>
-      <td class="cell">NaN</td>
-      <td class="cell">170144</td>
+      <td class="cell">4212</td>
+      <td class="cell">9</td>
+      <td class="cell">84</td>
+      <td class="cell">1</td>
+      <td class="cell">171263</td>
       <td class="cell">33685</td>
     </tr>
     <tr>
@@ -1884,21 +1896,31 @@
       <td class="cell">NaN</td>
       <td class="cell">79</td>
       <td class="cell">NaN</td>
-      <td class="cell">109684</td>
+      <td class="cell">116448</td>
       <td class="cell">8076095</td>
     </tr>
     <tr>
       <td class="cell">163</td>
       <td class="cell">Chad</td>
-      <td class="cell">3581</td>
-      <td class="cell">NaN</td>
-      <td class="cell">126</td>
-      <td class="cell">NaN</td>
+      <td class="cell">3597</td>
+      <td class="cell">16</td>
+      <td class="cell">128</td>
+      <td class="cell">2</td>
       <td class="cell">NaN</td>
       <td class="cell">16712347</td>
     </tr>
     <tr>
       <td class="cell">164</td>
+      <td class="cell">San Marino</td>
+      <td class="cell">3278</td>
+      <td class="cell">31</td>
+      <td class="cell">72</td>
+      <td class="cell">NaN</td>
+      <td class="cell">37012</td>
+      <td class="cell">33975</td>
+    </tr>
+    <tr>
+      <td class="cell">165</td>
       <td class="cell">Comoros</td>
       <td class="cell">3276</td>
       <td class="cell">NaN</td>
@@ -1906,16 +1928,6 @@
       <td class="cell">NaN</td>
       <td class="cell">NaN</td>
       <td class="cell">880912</td>
-    </tr>
-    <tr>
-      <td class="cell">165</td>
-      <td class="cell">San Marino</td>
-      <td class="cell">3247</td>
-      <td class="cell">NaN</td>
-      <td class="cell">72</td>
-      <td class="cell">NaN</td>
-      <td class="cell">37012</td>
-      <td class="cell">33975</td>
     </tr>
     <tr>
       <td class="cell">166</td>
@@ -1980,8 +1992,8 @@
     <tr>
       <td class="cell">172</td>
       <td class="cell">Vietnam</td>
-      <td class="cell">2140</td>
-      <td class="cell">NaN</td>
+      <td class="cell">2142</td>
+      <td class="cell">2</td>
       <td class="cell">35</td>
       <td class="cell">NaN</td>
       <td class="cell">1529651</td>
@@ -2060,10 +2072,10 @@
     <tr>
       <td class="cell">180</td>
       <td class="cell">Monaco</td>
-      <td class="cell">1735</td>
-      <td class="cell">NaN</td>
-      <td class="cell">19</td>
-      <td class="cell">NaN</td>
+      <td class="cell">1752</td>
+      <td class="cell">17</td>
+      <td class="cell">21</td>
+      <td class="cell">2</td>
       <td class="cell">51953</td>
       <td class="cell">39413</td>
     </tr>
@@ -2120,11 +2132,11 @@
     <tr>
       <td class="cell">186</td>
       <td class="cell">Bhutan</td>
-      <td class="cell">861</td>
-      <td class="cell">NaN</td>
+      <td class="cell">863</td>
+      <td class="cell">2</td>
       <td class="cell">1</td>
       <td class="cell">NaN</td>
-      <td class="cell">490461</td>
+      <td class="cell">496858</td>
       <td class="cell">776828</td>
     </tr>
     <tr>
