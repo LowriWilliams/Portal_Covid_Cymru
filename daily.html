@@ -334,6 +334,12 @@
 		var month_average_vaccinations = false;
 		var week_vaccinations = false;
 		var week_average_vaccinations = false;
+		var year_vaccinations_2 = false;
+		var year_average_vaccinations_2 = false;
+		var month_vaccinations_2 = false;
+		var month_average_vaccinations_2 = false;
+		var week_vaccinations_2 = false;
+		var week_average_vaccinations_2 = false;
 	</script>
 	<script src="assets/js/daily_graph.js"></script> 
 
@@ -439,6 +445,20 @@
 		fill: false,
         hidden: true
 		},
+		{
+		label: 'Daily Vaccinations 2nd Dose',
+		data: year_vaccinations_2,
+		borderColor: "#7a49a5",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations 2nd Dose',
+		data: year_average_vaccinations_2,
+		borderColor:  "#7a49a5",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		}
         ]
 	},
 	options: {
@@ -474,7 +494,7 @@
         {
 		label: '7 Day Moving Average',
 		data: month_average_cases,
-		borderColor:  "grey",
+		borderColor:  "#3e95cd",
         borderDash: [10,5],
 		fill: false,
         hidden: true
@@ -488,7 +508,7 @@
         {
 		label: '7 Day Moving Average Deaths',
 		data: month_average_deaths,
-		borderColor: "grey",
+		borderColor: "#cd3e4e",
 		fill: false,
         hidden: true
 		},
@@ -501,7 +521,7 @@
         {
 		label: '7 Day Moving Average Tests',
 		data: month_average_tests,
-		borderColor:  "grey",
+		borderColor:  "#ffd500",
         borderDash: [10,10],
 		fill: false,
         hidden: true
@@ -520,6 +540,20 @@
 		fill: false,
         hidden: true
 		},
+		{
+		label: 'Daily Vaccinations 2nd Dose',
+		data: month_vaccinations_2,
+		borderColor: "#7a49a5",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations 2nd Dose',
+		data: month_average_vaccinations_2,
+		borderColor:  "#7a49a5",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		}
         ]
 	},
 	options: {
@@ -555,7 +589,7 @@
         {
 		label: '7 Day Moving Average',
 		data: week_average_cases,
-		borderColor:  "grey",
+		borderColor:  "#3e95cd",
         borderDash: [10,5],
 		fill: false,
         hidden: true
@@ -569,7 +603,7 @@
         {
 		label: '7 Day Moving Average Deaths',
 		data: week_average_deaths,
-		borderColor: "grey",
+		borderColor: "#cd3e4e",
 		fill: false,
         hidden: true
 		},
@@ -582,7 +616,7 @@
         {
 		label: '7 Day Moving Average Tests',
 		data: week_average_tests,
-		borderColor:  "grey",
+		borderColor:   "#ffd500",
         borderDash: [10,10],
 		fill: false,
         hidden: true
@@ -601,6 +635,20 @@
 		fill: false,
         hidden: true
 		},
+		{
+		label: 'Daily Vaccinations 2nd Dose',
+		data: week_vaccinations_2,
+		borderColor: "#7a49a5",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations 2nd Dose',
+		data: week_average_vaccinations_2,
+		borderColor:  "#7a49a5",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		}
         ]
 	},
 	options: {
