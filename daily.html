@@ -337,6 +337,12 @@
 		var month_average_vaccinations_2 = false;
 		var week_vaccinations_2 = false;
 		var week_average_vaccinations_2 = false;
+		var year_vaccinations_booster = false;
+		var year_average_vaccinations_booster = false;
+		var month_vaccinations_booster = false;
+		var month_average_vaccinations_booster = false;
+		var week_vaccinations_booster = false;
+		var week_average_vaccinations_booster = false;
 	</script>
 	<script src="assets/js/daily_graph.js"></script> 
 
@@ -455,6 +461,20 @@
         borderDash: [10,10],
 		fill: false,
         hidden: true
+		},
+		{
+		label: 'Daily Vaccinations Booster',
+		data: year_vaccinations_booster,
+		borderColor: "#ffa500",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations Booster',
+		data: year_average_vaccinations_booster,
+		borderColor:  "#ffa500",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
 		}
         ]
 	},
@@ -550,6 +570,20 @@
         borderDash: [10,10],
 		fill: false,
         hidden: true
+		},
+		{
+		label: 'Daily Vaccinations Booster',
+		data: month_vaccinations_booster,
+		borderColor: "#ffa500",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations Booster',
+		data: month_average_vaccinations_booster,
+		borderColor:  "#ffa500",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
 		}
         ]
 	},
@@ -642,6 +676,20 @@
 		label: '7 Day Moving Average Vaccinations 2nd Dose',
 		data: week_average_vaccinations_2,
 		borderColor:  "#7a49a5",
+        borderDash: [10,10],
+		fill: false,
+        hidden: true
+		},
+		{
+		label: 'Daily Vaccinations Booster',
+		data: week_vaccinations_booster,
+		borderColor: "#ffa500",
+		fill: false,
+		},
+		{
+		label: '7 Day Moving Average Vaccinations Booster',
+		data: week_average_vaccinations_booster,
+		borderColor:  "#ffa500",
         borderDash: [10,10],
 		fill: false,
         hidden: true

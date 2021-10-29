@@ -322,6 +322,9 @@
 		var year_vaccination_2 = false;
 		var month_vaccination_2 = false;
 		var week_vaccination_2 = false;
+		var year_vaccination_booster = false;
+		var month_vaccination_booster = false;
+		var week_vaccination_booster = false;
 	</script>
 	<script src="assets/js/index_graph.js"></script> 
 
@@ -401,6 +404,12 @@
 		data: year_vaccination_2,
 		borderColor:  "#7a49a5",
 		fill: false
+		},
+		{
+		label: 'Cumulative Vaccinations (Booster)',
+		data: year_vaccination_booster,
+		borderColor:  "#ffa500",
+		fill: false
 		}
 		]
 	},
@@ -455,6 +464,12 @@
 		label: 'Cumulative Vaccinations (Second Dose)',
 		data: month_vaccination_2,
 		borderColor:  "#7a49a5",
+		fill: false
+		},
+		{
+		label: 'Cumulative Vaccinations (Booster)',
+		data: month_vaccination_booster,
+		borderColor:  "#ffa500",
 		fill: false
 		}
 		]
@@ -511,7 +526,14 @@
 		data: week_vaccination_2,
 		borderColor:  "#7a49a5",
 		fill: false
-		}]
+		},
+		{
+		label: 'Cumulative Vaccinations (Booster)',
+		data: week_vaccination_booster,
+		borderColor:  "#ffa500",
+		fill: false
+		}
+		]
 	},
 	options: {
 		maintainAspectRatio: false,
